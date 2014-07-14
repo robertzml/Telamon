@@ -1,1 +1,28 @@
 /* here you can put your own css to customize and override the theme */
+.header .navbar-brand {
+	padding-top: 0;
+}
+
+.dashboard-stat .title {
+	float:left;
+	display:block;
+	padding-top:20px;
+	font-size:30px;
+	font-family:'微软雅黑';
+	color:#FFF;
+}
+
+.dashboard-stat .details .number {
+	font-weight:800;
+	font-size:40px;
+	letter-spacing: 1px;
+	font-family:'Arial Black', Arial;
+}
+
+.pricing-head h4 {
+	color: #35aa47;
+}
+
+.pricing-content td{
+	font-size:24px;
+}
