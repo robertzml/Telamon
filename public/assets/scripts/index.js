@@ -5,13 +5,127 @@ var Index = function () {
 
         //main function
         init: function () {
-            App.addResponsiveHandler(function () {
-                jQuery('.vmaps').each(function () {
-                    var map = jQuery(this);
-                    map.width(map.parent().width());
-                });
-            });
+        
         },
+		
+		initHighchart: function() {
+			function randValue() {
+                return (Math.floor(Math.random() * (1 + 50 - 20))) + 10;
+            }
+			
+			var products = [
+                [1, randValue()],
+                [2, randValue()],
+                [3, 2 + randValue()],
+                [4, 3 + randValue()],
+                [5, 5 + randValue()],
+                [6, 10 + randValue()],
+                [7, 15 + randValue()],
+                [8, 20 + randValue()],
+                [9, 25 + randValue()],
+                [10, 30 + randValue()],
+                [11, 35 + randValue()],
+                [12, 25 + randValue()],
+                [13, 15 + randValue()],
+                [14, 20 + randValue()],
+                [15, 45 + randValue()],
+                [16, 50 + randValue()],
+                [17, 65 + randValue()],
+                [18, 70 + randValue()],
+                [19, 85 + randValue()],
+                [20, 80 + randValue()],
+                [21, 75 + randValue()],
+                [22, 80 + randValue()],
+                [23, 75 + randValue()],
+                [24, 70 + randValue()],
+                [25, 65 + randValue()],
+                [26, 75 + randValue()],
+                [27, 80 + randValue()],
+                [28, 85 + randValue()],
+                [29, 90 + randValue()],
+                [30, 95 + randValue()]
+            ];
+
+            var costs = [
+                [1, randValue() - 5],
+                [2, randValue() - 5],
+                [3, randValue() - 5],
+                [4, 6 + randValue()],
+                [5, 5 + randValue()],
+                [6, 20 + randValue()],
+                [7, 25 + randValue()],
+                [8, 36 + randValue()],
+                [9, 26 + randValue()],
+                [10, 38 + randValue()],
+                [11, 39 + randValue()],
+                [12, 50 + randValue()],
+                [13, 51 + randValue()],
+                [14, 12 + randValue()],
+                [15, 13 + randValue()],
+                [16, 14 + randValue()],
+                [17, 15 + randValue()],
+                [18, 15 + randValue()],
+                [19, 16 + randValue()],
+                [20, 17 + randValue()],
+                [21, 18 + randValue()],
+                [22, 19 + randValue()],
+                [23, 20 + randValue()],
+                [24, 21 + randValue()],
+                [25, 14 + randValue()],
+                [26, 24 + randValue()],
+                [27, 25 + randValue()],
+                [28, 26 + randValue()],
+                [29, 27 + randValue()],
+                [30, 31 + randValue()]
+            ];
+			
+			var option = {
+				chart: {
+					renderTo: 'rice_statistics',
+					type: 'line'					
+				},
+				title: {
+					text: null
+				},				
+				xAxis: {
+					categories: []
+				},
+				yAxis: {
+					title: {
+						text: null
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				legend: {
+					layout: 'vertical',
+					align: 'left',
+					verticalAlign: 'top',
+					x: 50,
+					y: 20,
+					floating: true,
+					borderWidth: 1					
+				},
+				plotOptions: {
+					line: {
+						dataLabels: {
+							enabled: true
+						},
+						enableMouseTracking: false
+					}
+				},
+				series: [{
+					name: '出饭量',
+					data: products
+				}, {
+					name: '成本',
+					data: costs
+				}]
+			};
+			
+			var chart1 = new Highcharts.Chart(option);
+		},
 
         initCharts: function () {
             if (!jQuery.plot) {

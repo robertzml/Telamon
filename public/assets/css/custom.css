@@ -22,7 +22,14 @@
 .pricing-head h4 {
 	color: #35aa47;
 }
+.pricing-head h4 b {
+	color: #900;
+}
 
 .pricing-content td{
 	font-size:24px;
+}
+
+.pricing-content li {
+	font-size: 18px;
 }
