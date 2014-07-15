@@ -23,14 +23,9 @@
                         <i class="fa fa-angle-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="extra_profile.html"><i class="fa fa-user"></i> My Profile</a></li>
-                        <li><a href="page_calendar.html"><i class="fa fa-calendar"></i> My Calendar</a></li>
-                        <li><a href="inbox.html"><i class="fa fa-envelope"></i> My Inbox <span class="badge badge-danger">3</span></a></li>
-                        <li><a href="#"><i class="fa fa-tasks"></i> My Tasks <span class="badge badge-success">7</span></a></li>
-                        <li class="divider"></li>
                         <li><a href="javascript:;" id="trigger_fullscreen"><i class="fa fa-move"></i> Full Screen</a></li>
-                        <li><a href="extra_lock.html"><i class="fa fa-lock"></i> Lock Screen</a></li>
-                        <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
+                        <li><a href="#"><i class="fa fa-lock"></i> Lock Screen</a></li>
+                        <li><a href="#"><i class="fa fa-key"></i> Log Out</a></li>
                     </ul>
                 </li>
                 <!-- END USER LOGIN DROPDOWN -->
@@ -48,18 +43,23 @@
 
             <!-- BEGIN PAGE HEADER-->
             <div class="row">
-                <div class="col-md-12">
-                    <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                <div class="col-md-8 col-lg-8">
                     <h3 class="page-title">
                         实时成本核算 <small>每日用能&amp;产出</small>
                     </h3>
-                    <ul class="page-breadcrumb breadcrumb">
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h3 class="page-title pull-right">2014年7月15日 14:20:18</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12">
+                    <ul class="page-breadcrumb breadcrumb" style="margin-bottom: 10px;">
                         <li>
                             <i class="fa fa-home"></i>
                             <a href="#">今日能源资源消耗</a>
                         </li>
                     </ul>
-                    <!-- END PAGE TITLE & BREADCRUMB-->
                 </div>
             </div>
             <!-- END PAGE HEADER-->
@@ -168,7 +168,7 @@
                             <div class="caption"><i class="fa fa-cny"></i>实时成本</div>
                         </div>
                         <div class="portlet-body">
-                            <div class="pricing hover-effect">
+                            <div class="pricing">
                                 <div class="pricing-head">
                                     <h3 style="background-color: #27a9e3">成本核算</h3>
                                     <h4><i>&yen;</i>8.79 <span>元/箱</span></h4>
@@ -204,31 +204,25 @@
                 <div class="col-md-6 col-sm-6">
                     <div class="portlet box purple">
                         <div class="portlet-title">
-                            <div class="caption"><i class="fa fa-calendar"></i>General Stats</div>
-                            <div class="actions">
-                                <a href="javascript:;" class="btn btn-sm yellow easy-pie-chart-reload"><i class="fa fa-repeat"></i> Reload</a>
-                            </div>
+                            <div class="caption"><i class="fa fa-chain"></i>上周同比</div>
                         </div>
                         <div class="portlet-body">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="easy-pie-chart">
-                                        <div class="number transactions" data-percent="55"><span>+55</span>%</div>
-                                        <a class="title" href="#">Transactions <i class="m-icon-swapright"></i></a>
+                                        <div class="number transactions" data-percent="55"><span>55</span>%</div>
                                     </div>
                                 </div>
                                 <div class="margin-bottom-10 visible-sm"></div>
                                 <div class="col-md-4">
                                     <div class="easy-pie-chart">
-                                        <div class="number visits" data-percent="85"><span>+85</span>%</div>
-                                        <a class="title" href="#">New Visits <i class="m-icon-swapright"></i></a>
+                                        <div class="number visits" data-percent="85"><span>85</span>%</div>
                                     </div>
                                 </div>
                                 <div class="margin-bottom-10 visible-sm"></div>
                                 <div class="col-md-4">
                                     <div class="easy-pie-chart">
-                                        <div class="number bounce" data-percent="46"><span>-46</span>%</div>
-                                        <a class="title" href="#">Bounce <i class="m-icon-swapright"></i></a>
+                                        <div class="number bounce" data-percent="46"><span>46</span>%</div>
                                     </div>
                                 </div>
                             </div>
@@ -238,37 +232,10 @@
                 <div class="col-md-6 col-sm-6">
                     <div class="portlet box blue">
                         <div class="portlet-title">
-                            <div class="caption"><i class="fa fa-calendar"></i>Server Stats</div>
-                            <div class="tools">
-                                <a href="" class="collapse"></a>
-                                <a href="#portlet-config" data-toggle="modal" class="config"></a>
-                                <a href="" class="reload"></a>
-                                <a href="" class="remove"></a>
-                            </div>
+                            <div class="caption"><i class="fa fa-calendar"></i>一周用能</div>
                         </div>
                         <div class="portlet-body">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="sparkline-chart">
-                                        <div class="number" id="sparkline_bar"></div>
-                                        <a class="title" href="#">Network <i class="m-icon-swapright"></i></a>
-                                    </div>
-                                </div>
-                                <div class="margin-bottom-10 visible-sm"></div>
-                                <div class="col-md-4">
-                                    <div class="sparkline-chart">
-                                        <div class="number" id="sparkline_bar2"></div>
-                                        <a class="title" href="#">CPU Load <i class="m-icon-swapright"></i></a>
-                                    </div>
-                                </div>
-                                <div class="margin-bottom-10 visible-sm"></div>
-                                <div class="col-md-4">
-                                    <div class="sparkline-chart">
-                                        <div class="number" id="sparkline_line"></div>
-                                        <a class="title" href="#">Load Rate <i class="m-icon-swapright"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            <div id="history-energy" style="height:130px;"></div>
                         </div>
                     </div>
                 </div>
@@ -320,7 +287,7 @@
         Index.init();
 
         Index.initHighchart();
-
+        Index.initColumn();
        // Index.initCharts(); // init index page's custom scripts
         Index.initMiniCharts();
 

@@ -105,7 +105,7 @@ var Index = function () {
 					x: 50,
 					y: 20,
 					floating: true,
-					borderWidth: 1					
+					borderWidth: 1
 				},
 				plotOptions: {
 					line: {
@@ -127,6 +127,62 @@ var Index = function () {
 			var chart1 = new Highcharts.Chart(option);
 		},
 
+		initColumn: function() {
+			var option = {
+				chart: {
+					type: 'column',
+					renderTo: 'history-energy'
+				},
+				title: {
+					text: null
+				},				
+				xAxis: {
+					categories: [],
+					labels: {
+						enabled: false
+					}
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: null
+					}
+				},
+				plotOptions: {
+					column: {
+						pointPadding: 0.3,
+						borderWidth: 0,
+						dataLabels: {
+							enabled: true
+						}
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				legend: {
+					enabled: false
+				},
+				series: [{
+					name: '水',
+					data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6],
+					color: '#27a9e3'
+		
+				}, {
+					name: '电',
+					data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0],
+					color: '#28b779'
+		
+				}, {
+					name: '气',
+					data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0],
+					color: '#852b99'		
+				}]
+			};
+			
+			var chart2 = new Highcharts.Chart(option);
+		},
+		
         initCharts: function () {
             if (!jQuery.plot) {
                 return;
@@ -484,23 +540,23 @@ var Index = function () {
              
             $('.easy-pie-chart .number.transactions').easyPieChart({
                 animate: 1000,
-                size: 75,
-                lineWidth: 3,
-                barColor: App.getLayoutColorCode('yellow')
+                size: 130,
+                lineWidth: 8,
+                barColor: App.getLayoutColorCode('blue')
             });
 
             $('.easy-pie-chart .number.visits').easyPieChart({
                 animate: 1000,
-                size: 75,
-                lineWidth: 3,
+                size: 130,
+                lineWidth: 8,
                 barColor: App.getLayoutColorCode('green')
             });
              
             $('.easy-pie-chart .number.bounce').easyPieChart({
                 animate: 1000,
-                size: 75,
-                lineWidth: 3,
-                barColor: App.getLayoutColorCode('red')
+                size: 130,
+                lineWidth: 8,
+                barColor: App.getLayoutColorCode('purple')
             });
 
             $('.easy-pie-chart-reload').click(function(){
@@ -511,11 +567,10 @@ var Index = function () {
                 });
             });
                
-            $("#sparkline_bar").sparkline([8,9,10,11,10,10,12,10,10,11,9,12,11,10,9,11,13,13,12], {
-                type: 'bar',
-                width: '100',
-                barWidth: 5,
-                height: '55',
+            $("#sparkline_bar").sparkline([80,90,100,101,100,105,120], {
+                type: 'bar',                
+                barWidth: 15,
+                height: '80',
                 barColor: '#35aa47',
                 negBarColor: '#e02222'}
             );
