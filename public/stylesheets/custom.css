@@ -1,0 +1,9 @@
+/* Custom css */
+
+body, h1, h2, h3, h4, h5, h6 , .label, .page-title, .dropdown-menu {
+	font-family: '微软雅黑';
+}
+
+.page-header.navbar .page-logo .logo-default {
+	margin: 0;
+}
