@@ -18,21 +18,21 @@
             <div class="page-content">
                 <!-- BEGIN PAGE HEADER-->
                 <h3 class="page-title">
-                    Blank Page <small>blank page</small>
+                    <%= title %>
                 </h3>
                 <div class="page-bar">
                     <ul class="page-breadcrumb">
                         <li>
                             <i class="fa fa-home"></i>
-                            <a href="index.html">Home</a>
+                            <a href="/">主页</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="#">Page Layouts</a>
+                            <a href="#">计划管理</a>
                             <i class="fa fa-angle-right"></i>
                         </li>
                         <li>
-                            <a href="#">Blank Page</a>
+                            <a href="#">计划录入</a>
                         </li>
                     </ul>
                     <div class="page-toolbar">
@@ -50,11 +50,6 @@
                                 <li>
                                     <a href="#">Something else here</a>
                                 </li>
-                                <li class="divider">
-                                </li>
-                                <li>
-                                    <a href="#">Separated link</a>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -63,7 +58,61 @@
                 <!-- BEGIN PAGE CONTENT-->
                 <div class="row">
                     <div class="col-md-12">
-                        Page content goes here
+                        <div class="portlet box blue">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="fa fa-gift"></i> 计划信息
+                                </div>
+                                <div class="tools">
+                                    <a href="" class="collapse">
+                                    </a>
+                                    <a href="" class="reload">
+                                    </a>
+                                    <a href="" class="remove">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="portlet-body form">
+                                <form class="form-horizontal" role="form">
+                                    <div class="form-body">
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">日期选择</label>
+                                            <div class="col-md-6">
+                                                <input type="text" class="form-control" placeholder="Enter text">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">班次</label>
+                                            <div class="col-md-6">
+                                                <div class="radio-list">
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="optionsRadios" id="optionsRadios25" value="option1" checked> 上午 </label>
+                                                    <label class="radio-inline">
+                                                        <input type="radio" name="optionsRadios" id="optionsRadios26" value="option2" checked> 下午 </label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-3 control-label">备注</label>
+                                            <div class="col-md-6">
+                                                <textarea class="form-control" rows="3"></textarea>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-actions">
+                                        <div class="row">
+                                            <div class="col-md-offset-3 col-md-9">
+                                                <button type="submit" class="btn green">Submit</button>
+                                                <button type="button" class="btn default">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- END PAGE CONTENT-->
@@ -77,6 +126,11 @@
 
     <% include ../scripts %>
 
+    <script type="text/javascript">
+        $(function() {
+            telamon.leftNavActive($('#planning-create'));
+        });
+    </script>
 </body>
 <!-- END BODY -->
 </html>
