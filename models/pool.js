@@ -6,7 +6,8 @@ var pool  = mysql.createPool({
     host     : '192.168.56.102',
     user     : 'root',
     password : '123456',
-    database:'telamon'
+    database:'telamon',
+    multipleStatements: true
 });
 
 exports.query = function(sql, callback) {
