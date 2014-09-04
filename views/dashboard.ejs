@@ -27,15 +27,14 @@
                     <h3 class="page-title pull-right">2014年7月15日 14:20:18</h3>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12 col-lg-12">
-                    <ul class="page-breadcrumb breadcrumb" style="margin-bottom: 10px;">
-                        <li>
-                            <i class="fa fa-home"></i>
-                            <a href="#">今日能源资源消耗</a>
-                        </li>
-                    </ul>
-                </div>
+
+            <div class="page-bar">
+                <ul class="page-breadcrumb">
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="#">今日能源资源消耗</a>
+                    </li>
+                </ul>
             </div>
             <!-- END PAGE HEADER-->
 
@@ -77,7 +76,7 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="dashboard-stat purple">
+                    <div class="dashboard-stat purple-plum">
                         <div class="visual">
                             <i class="fa fa-fire"></i>
                         </div>
@@ -117,7 +116,7 @@
                             <div class="caption"><i class="fa fa-cogs"></i>今日计划</div>
                         </div>
                         <div class="portlet-body">
-                            <div class="pricing pricing-active">
+                            <div class="pricing">
                                 <div class="pricing-head">
                                     <h3>食堂预订</h3>
                                     <h4><b>300</b> / 920<span>完成 / 计划</span></h4>
@@ -148,6 +147,7 @@
                                     <h3 style="background-color: #27a9e3">成本核算</h3>
                                     <h4><i>&yen;</i>8.79 <span>元/箱</span></h4>
                                 </div>
+
                                 <ul class="pricing-content list-unstyled">
                                     <li><i class="fa fa-tags"></i> 水：1.05 元/吨, 电：0.5元/度</li>
                                     <li><i class="fa fa-asterisk"></i> 气：2.4元/方，米：41元/袋</li>
@@ -186,18 +186,27 @@
                                 <div class="col-md-4">
                                     <div class="easy-pie-chart">
                                         <div class="number transactions" data-percent="55"><span>55</span>%</div>
+                                        <a class="title" href="#">
+                                            用水
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="margin-bottom-10 visible-sm"></div>
                                 <div class="col-md-4">
                                     <div class="easy-pie-chart">
                                         <div class="number visits" data-percent="85"><span>85</span>%</div>
+                                        <a class="title" href="#">
+                                            用电
+                                        </a>
                                     </div>
                                 </div>
                                 <div class="margin-bottom-10 visible-sm"></div>
                                 <div class="col-md-4">
                                     <div class="easy-pie-chart">
                                         <div class="number bounce" data-percent="46"><span>46</span>%</div>
+                                        <a class="title" href="#">
+                                            用气
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -210,7 +219,7 @@
                             <div class="caption"><i class="fa fa-calendar"></i>一周用能</div>
                         </div>
                         <div class="portlet-body">
-                            <div id="history-energy" style="height:130px;"></div>
+                            <div id="history-energy" style="height:114px;"></div>
                         </div>
                     </div>
                 </div>
@@ -228,10 +237,20 @@
 <% include footer %>
 
 <% include scripts %>
+<script src="/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
+<script src="/assets/global/plugins/Highcharts/highcharts.js" type="text/javascript"></script>
 
 <script type="text/javascript">
     $(function() {
         telamon.leftNavActive($('#dashboard-index'));
+
+        telamon.initHighchart();
+        telamon.initMiniCharts();
+        telamon.initColumn();
     });
 </script>
 </body>

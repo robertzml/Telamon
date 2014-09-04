@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="zh-cn">
+<!--<![endif]-->
+<% include ../headmeta %>
+
+<!-- BEGIN BODY -->
+<body class="page-header-fixed page-quick-sidebar-over-content page-header-fixed-mobile page-footer-fixed">
+<% include ../header %>
+
+<div class="page-container">
+    <% include ../sidebar %>
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <h3 class="page-title">
+                <%= title %>
+            </h3>
+            <div class="page-bar">
+                <ul class="page-breadcrumb">
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="/">主页</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="#">计划管理</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="#"><%= title %></a>
+                    </li>
+                </ul>
+                <div class="page-toolbar">
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-fit-height grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+                            Actions <i class="fa fa-angle-down"></i>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li>
+                                <a href="#">Action</a>
+                            </li>
+                            <li>
+                                <a href="#">Another action</a>
+                            </li>
+                            <li>
+                                <a href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE HEADER-->
+            <!-- BEGIN PAGE CONTENT-->
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portlet box green">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-list"></i> 计划列表
+                            </div>
+                            <div class="tools">
+                                <a href="" class="collapse">
+                                </a>
+                                <a href="" class="reload">
+                                </a>
+                                <a href="" class="remove">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <table class="table table-bordered table-hover" id="planning-table">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        编号
+                                    </th>
+                                    <th>
+                                        生产日期
+                                    </th>
+                                    <th>
+                                        批次
+                                    </th>
+                                    <th>
+                                        总计划量
+                                    </th>
+                                    <th>
+                                        录入时间
+                                    </th>
+                                    <th>
+                                        备注
+                                    </th>
+                                    <th>
+                                        操作
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <% data.forEach(function(item) { %>
+                                <tr>
+                                    <td><%= item.id %></td>
+                                    <td><%= item.productionDate %></td>
+                                    <td>
+                                        <% if(item.productionBatch == 1) { %>
+                                        <span class="label label-sm bg-green-jungle"> 上午 </span>
+                                        <% } else { %>
+                                        <span class="label label-sm bg-blue-hoki"> 下午 </span>
+                                        <% }%>
+                                    </td>
+                                    <td>
+                                        <%= item.quantity %>
+                                    </td>
+                                    <td>
+                                       <%= item.updateDate %>
+                                    </td>
+                                    <td>
+                                        <%= item.remark %>
+                                    </td>
+                                    <td>
+                                        <a href="/planning/details/<%= item.id %>" class="btn btn-info btn-sm" role="button"><i class="fa fa-check-circle"></i>&nbsp;查看</a>
+                                        <a href="/planning/edit/<%= item.id %>" class="btn btn-warning btn-sm" role="button"><i class="fa fa-edit"></i>&nbsp;编辑</a>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+</div>
+
+
+<% include ../footer %>
+
+<% include ../scripts %>
+
+<script type="text/javascript">
+    $(function() {
+        telamon.leftNavActive($('#planning-index'));
+
+        //telamon.getTotalQuantity(4, $('.planning-quantity'));
+
+        telamon.initDatatable($('#planning-table'));
+    });
+</script>
+</body>
+<!-- END BODY -->
+</html>
