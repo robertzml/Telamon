@@ -28,40 +28,22 @@
                         <i class="fa fa-angle-right"></i>
                     </li>
                     <li>
-                        <a href="#">系统设置</a>
+                        <a href="#">计划管理</a>
                         <i class="fa fa-angle-right"></i>
                     </li>
                     <li>
                         <a href="#"><%= title %></a>
                     </li>
                 </ul>
-                <div class="page-toolbar">
-                    <div class="btn-group pull-right">
-                        <button type="button" class="btn btn-fit-height grey-salt dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
-                            Actions <i class="fa fa-angle-down"></i>
-                        </button>
-                        <ul class="dropdown-menu pull-right" role="menu">
-                            <li>
-                                <a href="#">Action</a>
-                            </li>
-                            <li>
-                                <a href="#">Another action</a>
-                            </li>
-                            <li>
-                                <a href="#">Something else here</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
             <!-- END PAGE HEADER-->
             <!-- BEGIN PAGE CONTENT-->
             <div class="row">
                 <div class="col-md-12">
-                    <div class="portlet box green">
+                    <div class="portlet box blue">
                         <div class="portlet-title">
                             <div class="caption">
-                                <i class="fa fa-edit"></i> 食堂编辑
+                                <i class="fa fa-gift"></i> 计划信息
                             </div>
                             <div class="tools">
                                 <a href="" class="collapse">
@@ -73,43 +55,39 @@
                             </div>
                         </div>
                         <div class="portlet-body form">
-                            <form class="form-horizontal" role="form" action="/dining/edit" method="post">
+                            <form class="form-horizontal" role="form" id="form_planning" action="/planning/create" method="post">
                                 <div class="form-body">
+                                    <div class="alert alert-danger display-hide">
+                                        <button class="close" data-close="alert"></button>
+                                        输入有误请检查.
+                                    </div>
+                                    <div class="alert alert-success display-hide">
+                                        <button class="close" data-close="alert"></button>
+                                        输入验证成功!
+                                    </div>
                                     <div class="form-group">
                                         <label class="col-md-3 control-label">编号</label>
                                         <div class="col-md-6">
-                                            <input type="text" name="id" value="<%= data.id %>" class="form-control" readonly="readonly" />
+                                            <input type="text" class="form-control" name="id" value="<%= id %>" readonly="readonly" />
                                         </div>
                                     </div>
+
+                                    <% data.forEach(function(item) { %>
                                     <div class="form-group">
-                                        <label class="col-md-3 control-label">名称</label>
+                                        <label class="col-md-3 control-label"><%= item.name %></label>
                                         <div class="col-md-6">
-                                            <input type="text" name="name" value="<%= data.name %>" class="form-control" />
+                                            <input type="number" class="form-control" name="planningCount<%= item.id %>" value="<%= item.quantity %>" />
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label">备注</label>
-                                        <div class="col-md-6">
-                                            <textarea class="form-control" name="remark" value="<%= data.remark %>" rows="3"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label">状态</label>
-                                        <div class="col-md-6">
-                                            <div class="radio-list">
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="status" id="status1" value="0" checked> 启用 </label>
-                                                <label class="radio-inline">
-                                                    <input type="radio" name="status" id="status2" value="1"> 禁用 </label>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <% }) %>
+
                                 </div>
+
                                 <div class="form-actions">
                                     <div class="row">
                                         <div class="col-md-offset-3 col-md-9">
-                                            <button type="submit" class="btn blue">保存</button>
-                                            <a href="/dining" class="btn btn-default" role="button"><i class="fa fa-list"></i>&nbsp;取消</a>
+                                            <button type="submit" class="btn green">保存</button>
+                                            <a href="/planning/details/<%= id %>" class="btn btn-default" role="button"><i class="fa fa-th"></i>&nbsp;取消</a>
                                         </div>
                                     </div>
                                 </div>
@@ -131,7 +109,9 @@
 
 <script type="text/javascript">
     $(function() {
-        telamon.leftNavActive($('#dining-index'));
+        telamon.leftNavActive($('#planning-index'));
+
+        //telamon.planningValidate();
     });
 </script>
 </body>

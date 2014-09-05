@@ -52,11 +52,27 @@ router.get('/details/:id', function(req, res) {
             id: result[0].id,
             productionDate: moment(result[0].productionDate).format("YYYY-MM-DD"),
             productionBatch: result[0].productionBatch,
+            quantity: result[0].quantity,
             updateDate:  moment(result[0].updateDate).format("YYYY-MM-DD hh:mm:ss"),
             remark: result[0].remark
         };
 
         res.render('planning/details', { title: '计划信息', id: id, data: data });
+
+    });
+
+});
+
+router.get('/edit/:id', function(req, res) {
+
+    var id = req.params.id;
+
+    var sql = "SELECT * FROM planningDetails LEFT JOIN dining on planningDetails.targetId = dining.id WHERE planningId = ?";
+    var params = [ id ];
+
+    pool.query(sql, params, function(err, rows) {
+
+        res.render('planning/edit', { title: '计划编辑', id: id, data: rows });
 
     });
 
@@ -135,5 +151,18 @@ router.get('/getQuantity', function(req, res) {
     });
 });
 
+
+router.get('/getDetails', function(req, res) {
+    var id = req.query.id;
+
+    var sql = "SELECT * FROM planningDetails LEFT JOIN dining on planningDetails.targetId = dining.id WHERE planningId = ?";
+    var param = [ id ];
+
+    pool.query(sql, param, function(err, rows) {
+
+        res.json(rows);
+    });
+
+});
 
 module.exports = router;

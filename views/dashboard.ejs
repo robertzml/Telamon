@@ -5,6 +5,12 @@
 <html lang="zh-cn">
 <!--<![endif]-->
 <% include headmeta %>
+<style type="text/css">
+    .page-bar {
+        margin-bottom: 10px;
+    }
+</style>
+
 
 <!-- BEGIN BODY -->
 <body class="page-header-fixed page-full-width page-header-fixed-mobile page-footer-fixed">
@@ -24,7 +30,7 @@
                     </h3>
                 </div>
                 <div class="col-md-4 col-lg-4">
-                    <h3 class="page-title pull-right">2014年7月15日 14:20:18</h3>
+                    <h3 class="page-title pull-right" id="current-time"></h3>
                 </div>
             </div>
 
@@ -101,7 +107,7 @@
                         </div>
                         <div class="details">
                             <div class="number">12</div>
-                            <div class="desc">袋</div>
+                            <div class="desc">千克</div>
                         </div>
                         <a class="more" href="#"></a>
                     </div>
@@ -121,15 +127,10 @@
                                     <h3>食堂预订</h3>
                                     <h4><b>300</b> / 920<span>完成 / 计划</span></h4>
                                 </div>
-                                <table class="pricing-content table table-bordered table-striped">
-                                    <tr>
-                                        <td>一食堂 300 箱</td>
-                                        <td>二食堂 220 箱</td>
-                                    </tr>
-                                    <tr>
-                                        <td>三食堂 160 箱</td>
-                                        <td>四食堂 240 箱</td>
-                                    </tr>
+                                <table class="pricing-content table table-bordered">
+                                    <tbody id="planning-details">
+                                    </tbody>
+
                                 </table>
                             </div>
                         </div>
@@ -251,6 +252,9 @@
         telamon.initHighchart();
         telamon.initMiniCharts();
         telamon.initColumn();
+
+        telamon.loadDashboardPlanningDetails(15, $('#planning-details'));
+        telamon.setDashboardTime($('#current-time'));
     });
 </script>
 </body>

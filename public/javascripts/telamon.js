@@ -361,14 +361,53 @@ var telamon = function () {
 		},
 		
   
-		getTotalQuantity: function(id, $dom) {
-			$.getJSON("/planning/getQuantity", { id: id }, function(response) {
-				var quantity = response.quantity;
-				
-				$dom.text(quantity);
+		
+		loadPlanningDetails: function(id, $dom) {
+			$.getJSON("/planning/getDetails", { id: id }, function(response) {
+				$.each(response, function(i, item) {
+					var name =	$("<td/>").append(response[i].name);
+					var quantity = $("<td/>").append(response[i].quantity + " 箱");
+					var row = $("<tr/>").append(name).append(quantity);
+					
+					$dom.append(row);
+				});
 			});
+		},
+		
+		
+		loadDashboardPlanningDetails: function(id, $dom) {
+			$.getJSON("/planning/getDetails", { id: id }, function(response) {
+
+				for (var i = 0; i < response.length; i = i + 2) {
+
+					var name1 =	$("<td/>").append(response[i].name);
+					var quantity1 = $("<td/>").append(response[i].quantity + " 箱");
+
+					var name2, quantity2;
+					if (i + 1 < response.length) {
+						name2 =	$("<td/>").append(response[i + 1].name);
+						quantity2 = $("<td/>").append(response[i + 1].quantity + " 箱");
+					} else  {
+						name2 =	$("<td/>");
+						quantity2 = $("<td/>");
+					}
+
+					var row = $("<tr/>").append(name1).append(quantity1).append(name2).append(quantity2);
+					$dom.append(row);
+				}
+				
+			});
+		},
+		
+		setDashboardTime: function($dom) {
+			
+			setInterval(function(){
+				$dom.html(moment().format('YYYY年MM月DD日 HH:mm:ss')); 
+			},1000);			
+			
 		}
 	}
+	
 
 }();
 

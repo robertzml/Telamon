@@ -76,6 +76,10 @@
                                         </td>
                                     </tr>
                                     <tr>
+                                        <td>计划总量</td>
+                                        <td><%= data.quantity %> 箱</td>
+                                    </tr>
+                                    <tr>
                                         <td>录入时间</td>
                                         <td><%= data.updateDate %></td>
                                     </tr>
@@ -85,6 +89,12 @@
                                     </tr>
                                 </tbody>
                             </table>
+
+                            <hr />
+                            <p>
+                                <a href="/planning/" class="btn btn-primary" role="button"><i class="fa fa-list"></i>&nbsp;回到列表</a>
+                                <a href="/planning/edit/<%= data.id %>" class="btn btn-warning" role="button"><i class="fa fa-edit"></i>&nbsp;编辑</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -104,8 +114,7 @@
     $(function() {
         telamon.leftNavActive($('#planning-index'));
 
-        //telamon.getTotalQuantity(4, $('.planning-quantity'));
-
+        telamon.loadPlanningDetails('<%= data.id %>', $('#planning-table tbody'))
     });
 </script>
 </body>
