@@ -103,7 +103,7 @@
                                 <% data.forEach(function(item) { %>
                                 <tr>
                                     <td><%= item.id %></td>
-                                    <td><%= item.productionDate %></td>
+                                    <td><%= momentDate(item.productionDate) %></td>
                                     <td>
                                         <% if(item.productionBatch == 1) { %>
                                         <span class="label label-sm bg-green-jungle"> 上午 </span>
@@ -115,7 +115,7 @@
                                         <%= item.quantity %>
                                     </td>
                                     <td>
-                                       <%= item.updateDate %>
+                                       <%= moment(item.updateDate) %>
                                     </td>
                                     <td>
                                         <%= item.remark %>
@@ -147,9 +147,8 @@
     $(function() {
         telamon.leftNavActive($('#planning-index'));
 
-        //telamon.getTotalQuantity(4, $('.planning-quantity'));
-
-        telamon.initDatatable($('#planning-table'));
+        var oTable = telamon.initDatatable($('#planning-table'));
+        oTable.api().order([ 0, 'desc' ]).draw();
     });
 </script>
 </body>

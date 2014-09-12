@@ -3,62 +3,23 @@ var router = express.Router();
 var moment = require('moment');
 
 var pool = require('../models/pool');
-
-var loadDining = function() {
-    var sql = "SELECT * FROM dining";
-
-
-    pool.query(sql, function(err, rows) {
-        if (err) throw err;
-
-        return rows;
-    });
-};
+var planning = require('../models/planning');
 
 
 router.get('/', function(req, res) {
 
-    var sql = "SELECT * FROM planning";
-
-    pool.query(sql, function(err, rows) {
-        if (err) throw err;
-
-        var data = [];
-        for (var i = 0; i < rows.length; i++) {
-            data.push({
-                id: rows[i].id,
-                productionDate: moment(rows[i].productionDate).format("YYYY-MM-DD"),
-                productionBatch: rows[i].productionBatch,
-                quantity: rows[i].quantity,
-                updateDate:  moment(rows[i].updateDate).format("YYYY-MM-DD hh:mm:ss"),
-                remark: rows[i].remark
-            })
-        }
-
-        res.render('planning/index', { title: '计划查询', data: data });
+    planning.getAll(function(result) {
+        res.render('planning/index', { title: '计划查询', data: result })
     });
+
 });
 
 router.get('/details/:id', function(req, res) {
 
     var id = req.params.id;
 
-    var sql = "SELECT * FROM planning WHERE id = ?";
-    var param = [ id ];
-
-    pool.query(sql, param, function(err, result) {
-
-        var data = {
-            id: result[0].id,
-            productionDate: moment(result[0].productionDate).format("YYYY-MM-DD"),
-            productionBatch: result[0].productionBatch,
-            quantity: result[0].quantity,
-            updateDate:  moment(result[0].updateDate).format("YYYY-MM-DD hh:mm:ss"),
-            remark: result[0].remark
-        };
-
-        res.render('planning/details', { title: '计划信息', id: id, data: data });
-
+    planning.get(id, function(result) {
+        res.render('planning/details', { title: '计划信息', id: id, data: result[0] });
     });
 
 });
@@ -67,13 +28,8 @@ router.get('/edit/:id', function(req, res) {
 
     var id = req.params.id;
 
-    var sql = "SELECT * FROM planningDetails LEFT JOIN dining on planningDetails.targetId = dining.id WHERE planningId = ?";
-    var params = [ id ];
-
-    pool.query(sql, params, function(err, rows) {
-
-        res.render('planning/edit', { title: '计划编辑', id: id, data: rows });
-
+    planning.getDetails(id, function(result) {
+        res.render('planning/edit', { title: '计划编辑', id: id, data: result });
     });
 
 });
@@ -97,15 +53,10 @@ router.post('/create', function(req, res) {
     var remark = req.body.remark;
     var now = new Date();
 
-
-    var sql = "INSERT INTO planning(productionDate, productionBatch, quantity, updateDate, remark) VALUES(?,?, 0, ?,?)";
-    var params = [ planningDate, batch, now, remark ];
-
-    pool.query(sql, params, function(err, result) {
-
+    planning.add(planningDate, batch, now, remark, function(result) {
         var id = result.insertId;
 
-        sql = "SELECT * FROM dining";
+        var sql = "SELECT * FROM dining";
 
         pool.query(sql, function(err, rows) {
 
@@ -127,15 +78,19 @@ router.post('/create', function(req, res) {
                 });
             }
 
-            var sql3 = "UPDATE planning SET quantity = ? WHERE id = ?";
-            var params3 = [ total, id ];
-            pool.query(sql3, params3, function(err, result){
+            planning.updateQuantity(id, total, function() {
                 res.redirect('/planning');
             });
 
-        });
+            /*var sql3 = "UPDATE planning SET quantity = ? WHERE id = ?";
+            var params3 = [ total, id ];
+            pool.query(sql3, params3, function(err, result){
+                res.redirect('/planning');
+            });*/
 
+        });
     });
+
 
 });
 
@@ -146,7 +101,6 @@ router.get('/getQuantity', function(req, res) {
     var param = [ id ];
 
     pool.query(sql, param, function(err, result) {
-
         res.json({ quantity: result[0].q });
     });
 });
@@ -155,12 +109,8 @@ router.get('/getQuantity', function(req, res) {
 router.get('/getDetails', function(req, res) {
     var id = req.query.id;
 
-    var sql = "SELECT * FROM planningDetails LEFT JOIN dining on planningDetails.targetId = dining.id WHERE planningId = ?";
-    var param = [ id ];
-
-    pool.query(sql, param, function(err, rows) {
-
-        res.json(rows);
+    planning.getDetails(id, function(result) {
+        res.json(result);
     });
 
 });

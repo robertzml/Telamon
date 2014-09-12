@@ -4,6 +4,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var moment = require('moment');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -61,5 +62,12 @@ app.use(function(err, req, res, next) {
     });
 });
 
+app.locals.moment = function(datetime) {
+    return moment(datetime).format("YYYY-MM-DD hh:mm:ss");
+}
+
+app.locals.momentDate = function(date) {
+    return moment(date).format("YYYY-MM-DD");
+}
 
 module.exports = app;

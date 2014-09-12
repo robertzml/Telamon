@@ -63,7 +63,7 @@
                                     </tr>
                                     <tr>
                                         <td>生产日期</td>
-                                        <td><%= data.productionDate %></td>
+                                        <td><%= momentDate(data.productionDate) %></td>
                                     </tr>
                                     <tr>
                                         <td>批次</td>
@@ -81,7 +81,7 @@
                                     </tr>
                                     <tr>
                                         <td>录入时间</td>
-                                        <td><%= data.updateDate %></td>
+                                        <td><%= moment(data.updateDate) %></td>
                                     </tr>
                                     <tr>
                                         <td>备注</td>
