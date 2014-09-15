@@ -39,6 +39,18 @@ exports.getDetails = function(id, callback) {
     });
 };
 
+exports.checkPlanning = function(planningDate, batch, callback) {
+    var sql = "select count(*) as c from planning where productionDate = ? and productionBatch = ?";
+    var param = [ planningDate, batch ];
+
+    pool.query(sql, param, function(err, rows) {
+       if (err) throw err;
+
+        callback(rows[0].c);
+    });
+}
+
+// add a planning
 exports.add = function(planningDate, batch, now, remark, callback) {
     var sql = "INSERT INTO planning(productionDate, productionBatch, quantity, updateDate, remark) VALUES(?,?, 0, ?,?)";
     var params = [ planningDate, batch, now, remark ];
@@ -50,11 +62,24 @@ exports.add = function(planningDate, batch, now, remark, callback) {
     });
 };
 
+// update planning total quantity
 exports.updateQuantity = function(id, quantity, callback) {
     var sql = "UPDATE planning SET quantity = ? WHERE id = ?";
     var params = [ quantity, id ];
 
     pool.query(sql, params, function(err, result){
+        if (err) throw err;
+
+        callback();
+    });
+};
+
+// admin planning details
+exports.addDetails = function(planningId, targetId, quantity, callback) {
+    var sql = "INSERT INTO planningDetails(planningId, targetId, quantity) VALUES(?, ?, ?)";
+    var params = [ planningId, targetId, quantity ];
+
+    pool.query(sql, params, function(err, result) {
         if (err) throw err;
 
         callback();

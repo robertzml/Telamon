@@ -41,7 +41,7 @@ router.get('/create', function(req, res) {
     pool.query(sql, function(err, rows) {
         if (err) throw err;
 
-        res.render('planning/create', { title: '计划录入', dinings: rows });
+        res.render('planning/create', { title: '计划录入', dinings: rows, errorMsg: '' });
     });
 });
 
@@ -53,44 +53,46 @@ router.post('/create', function(req, res) {
     var remark = req.body.remark;
     var now = new Date();
 
-    planning.add(planningDate, batch, now, remark, function(result) {
-        var id = result.insertId;
+    planning.checkPlanning(planningDate, batch, function(exist) {
 
-        var sql = "SELECT * FROM dining";
+        if (exist == 1) {
+            var sql = "SELECT * FROM dining";
 
-        pool.query(sql, function(err, rows) {
+            pool.query(sql, function(err, rows) {
+                if (err) throw err;
 
-            var sqlT = '';
-            var total = 0.0;
-            for (var i = 0; i < rows.length; i++) {
-
-                var count = req.body["planningCount" + rows[i].id];
-                if (count == '')
-                    count = 0;
-
-                total = total + parseFloat(count);
-
-                var sql2 = "INSERT INTO planningDetails(planningId, targetId, quantity) VALUES(?, ?, ?)";
-                var params2 = [ id, rows[i].id, count ];
-
-                pool.query(sql2, params2, function(err, result) {
-
-                });
-            }
-
-            planning.updateQuantity(id, total, function() {
-                res.redirect('/planning');
+                res.render('planning/create', { title: '计划录入', dinings: rows, errorMsg: '当前日期批次已录入' });
             });
 
-            /*var sql3 = "UPDATE planning SET quantity = ? WHERE id = ?";
-            var params3 = [ total, id ];
-            pool.query(sql3, params3, function(err, result){
-                res.redirect('/planning');
-            });*/
+        } else {
+            planning.add(planningDate, batch, now, remark, function(result) {
+                var id = result.insertId;
 
-        });
+                var sql = "SELECT * FROM dining";
+
+                pool.query(sql, function(err, rows) {
+
+                    var total = 0.0;
+                    for (var i = 0; i < rows.length; i++) {
+
+                        var count = req.body["planningCount" + rows[i].id];
+                        if (count == '')
+                            count = 0;
+
+                        total = total + parseFloat(count);
+
+                        planning.addDetails(id, rows[i].id, count, function() {
+                        });
+                    }
+
+                    planning.updateQuantity(id, total, function() {
+                        res.redirect('/planning');
+                    });
+
+                });
+            });
+        }
     });
-
 
 });
 

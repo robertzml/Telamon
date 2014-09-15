@@ -57,6 +57,12 @@
                             <div class="portlet-body form">
                                 <form class="form-horizontal" role="form" id="form_planning" action="/planning/create" method="post">
                                     <div class="form-body">
+                                        <% if (errorMsg != '') { %>
+                                            <div class="alert alert-danger">
+                                                <button class="close" data-close="alert"></button>
+                                                <%= errorMsg %>
+                                            </div>
+                                        <% } %>
                                         <div class="alert alert-danger display-hide">
                                             <button class="close" data-close="alert"></button>
                                             输入有误请检查.
