@@ -19,7 +19,12 @@ router.get('/details/:id', function(req, res) {
     var id = req.params.id;
 
     planning.get(id, function(result) {
-        res.render('planning/details', { title: '计划信息', id: id, data: result[0] });
+
+        planning.getDetails(id, function(rows) {
+
+            res.render('planning/details', { title: '计划信息', id: id, data: result[0], details: rows });
+
+        });
     });
 
 });
@@ -36,7 +41,7 @@ router.get('/edit/:id', function(req, res) {
 
 router.get('/create', function(req, res) {
 
-    var sql = "SELECT * FROM dining";
+    var sql = "SELECT * FROM dining WHERE status = 0";
 
     pool.query(sql, function(err, rows) {
         if (err) throw err;
@@ -56,7 +61,7 @@ router.post('/create', function(req, res) {
     planning.checkPlanning(planningDate, batch, function(exist) {
 
         if (exist == 1) {
-            var sql = "SELECT * FROM dining";
+            var sql = "SELECT * FROM dining WHERE status = 0";
 
             pool.query(sql, function(err, rows) {
                 if (err) throw err;
@@ -68,7 +73,7 @@ router.post('/create', function(req, res) {
             planning.add(planningDate, batch, now, remark, function(result) {
                 var id = result.insertId;
 
-                var sql = "SELECT * FROM dining";
+                var sql = "SELECT * FROM dining WHERE status = 0";
 
                 pool.query(sql, function(err, rows) {
 
@@ -96,6 +101,10 @@ router.post('/create', function(req, res) {
 
 });
 
+
+/*
+* functions return json
+*/
 router.get('/getQuantity', function(req, res) {
     var id = req.query.id;
 

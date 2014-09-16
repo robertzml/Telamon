@@ -67,6 +67,12 @@
                                 <td>计划总量</td>
                                 <td>{{ data.quantity }} 箱</td>
                             </tr>
+                            {% for item in details %}
+                            <tr>
+                                <td>{{ item.name }}</td>
+                                <td>{{ item.quantity }} 箱</td>
+                            </tr>
+                            {% endfor %}
                             <tr>
                                 <td>录入时间</td>
                                 <td>{{ moment(data.updateDate) }}</td>
