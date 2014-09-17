@@ -74,7 +74,7 @@ exports.updateQuantity = function(id, quantity, callback) {
     });
 };
 
-// admin planning details
+// add planning details
 exports.addDetails = function(planningId, targetId, quantity, callback) {
     var sql = "INSERT INTO planningDetails(planningId, targetId, quantity) VALUES(?, ?, ?)";
     var params = [ planningId, targetId, quantity ];
@@ -84,4 +84,17 @@ exports.addDetails = function(planningId, targetId, quantity, callback) {
 
         callback();
     });
+};
+
+// update planning details
+exports.updateDetails = function(planningId, targetId, quantity, callback) {
+    var sql = "UPDATE planningDetails SET quantity = ? WHERE planningId = ? AND targetId = ?";
+    var params = [ quantity, planningId, targetId ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw err;
+
+        callback();
+    });
+
 };

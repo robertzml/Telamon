@@ -39,6 +39,34 @@ router.get('/edit/:id', function(req, res) {
 
 });
 
+
+router.post('/edit/:id', function(req, res) {
+
+    var id = req.params.id;
+
+    var sql = "SELECT * FROM dining WHERE status = 0";
+    pool.query(sql, function(err, rows) {
+
+        var total = 0.0;
+        for(var i = 0; i < rows.length; i++) {
+            var count = req.body["planningCount" + rows[i].id];
+            if (count == null || count == '')
+                count = 0;
+
+            total = total + parseFloat(count);
+
+            planning.updateDetails(id, rows[i].id, count, function(){
+            });
+        }
+
+        planning.updateQuantity(id, total, function() {
+            res.redirect('/planning/details/' + id);
+        });
+    });
+
+});
+
+
 router.get('/create', function(req, res) {
 
     var sql = "SELECT * FROM dining WHERE status = 0";
