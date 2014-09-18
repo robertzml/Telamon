@@ -1,0 +1,70 @@
+{% extends '../layout.html' %}
+
+
+
+{% block body %}
+<div class="page-content-wrapper">
+    <div class="page-content">
+        <!-- BEGIN PAGE HEADER-->
+        <h3 class="page-title">
+            {{ title }}
+        </h3>
+        <div class="page-bar">
+            <ul class="page-breadcrumb">
+                <li>
+                    <i class="fa fa-home"></i>
+                    <a href="/">主页</a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <a href="#">统计汇总</a>
+                    <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                    <a href="#">{{ title }}</a>
+                </li>
+            </ul>
+        </div>
+        <!-- END PAGE HEADER-->
+        <!-- BEGIN PAGE CONTENT-->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="portlet box green">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-bar-chart-o"></i> 每日计划
+                        </div>
+                        <div class="tools">
+                            <a href="" class="collapse">
+                            </a>
+                            <a href="" class="reload">
+                            </a>
+                            <a href="" class="remove">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="portlet-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="container1" style="height: 500px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END PAGE CONTENT-->
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+    $(function() {
+        telamon.leftNavActive($('#statistic-planning'));
+
+        telamon.initPlanningStatistic();
+    });
+</script>
+{% endblock %}

@@ -127,6 +127,104 @@ var telamon = function () {
 		return oTable;
 	}
 	
+	
+	var handlePlanningStatistic = function(data) {
+		var option = {
+			chart: {
+				renderTo: 'container1',
+				type: 'column'
+			},
+			title: {
+				text: '米饭生产日计划总量'
+			},
+			xAxis: {
+				//categories:  [],
+				type: 'datetime',
+				labels: {
+					formatter:function(){
+						//var date = new Date(this.value);
+						return Highcharts.dateFormat('%Y-%m-%d', this.value);
+					}
+				}
+			},
+			yAxis: {
+				min: 0,
+				title: {
+                    text: '计划量'
+                },
+                stackLabels: {
+                    enabled: true,
+                    style: {
+                        fontWeight: 'bold',
+                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                    }
+                }
+			},
+			credits: {
+				enabled: false
+			},
+			tooltip: {    
+				shared : true,  
+				xDateFormat: '%Y-%m-%d'
+			},  
+			plotOptions: {
+                column: {
+                    stacking: 'normal',
+                    dataLabels: {
+                        enabled: true,
+                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+                        style: {
+                            textShadow: '0 0 3px black, 0 0 3px black'
+                        }
+                    }
+                }
+            },
+			series: [{
+				name: '上午',
+				data: []
+			}, {
+				name: '下午',
+				data: []
+			}]
+		};
+
+		/*var minDate = moment(data[0].productionDate);
+		var maxDate = moment(data[data.length - 1].productionDate);
+		var start = moment(data[0].productionDate);
+		var index = 0;
+		
+		for (; start.isBefore(maxDate);) {
+			//option.xAxis.categories.push(start.format("YYYY-MM-DD"));			
+			//option.xAxis.categories.push(start.toDate());
+			var current = moment(data[index].productionDate);
+			if (current.isSame(start)) {
+				if (data[index].productionBatch == 1) {
+					option.series[0].data.push(name: '', data: data[index].quantity);
+				}
+				else {
+					option.series[1].data.push(data[index].quantity);
+				}
+				index++;
+			} else {			
+			
+				start.add(1, 'days');
+			}
+			//start.add(1, 'days');
+		}*/
+		
+		$.each(data, function(i, item) {
+			var d = new Date(item.productionDate);
+			
+			if (item.productionBatch == 1) {
+				option.series[0].data.push([item.productionDate, item.quantity])
+			} else {
+				option.series[1].data.push([item.productionDate, item.quantity]);
+			}
+		});
+		
+		var chart1 = new Highcharts.Chart(option);
+	};
+	
 	return {
 		leftNavActive: function($dom) {
 					
@@ -408,6 +506,12 @@ var telamon = function () {
 			var chart2 = new Highcharts.Chart(option);
 		},
 		
+		
+		initPlanningStatistic: function() {
+			$.getJSON("/statistic/planningQuantity", function(response) {
+				handlePlanningStatistic(response);
+			});			
+		},
   
 		
 		loadPlanningDetails: function(id, $dom) {

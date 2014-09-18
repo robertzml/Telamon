@@ -12,6 +12,7 @@ var users = require('./routes/users');
 var dashboard = require('./routes/dashboard');
 var planning = require('./routes/planning');
 var dining = require('./routes/dining');
+var statistic = require('./routes/statistic');
 
 var app = express();
 
@@ -41,6 +42,7 @@ app.use('/users', users);
 app.use('/dashboard', dashboard);
 app.use('/planning', planning);
 app.use('/dining', dining);
+app.use('/statistic', statistic);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -73,7 +75,7 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.locals.moment = function(datetime) {
+app.locals.momentDateTime = function(datetime) {
     return moment(datetime).format("YYYY-MM-DD hh:mm:ss");
 }
 
