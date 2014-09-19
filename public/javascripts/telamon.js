@@ -150,9 +150,9 @@ var telamon = function () {
                 startDate: moment().subtract('days', 29),
                 endDate: moment(),
                 minDate: '2014-01-01',
-                maxDate: '2018-12-31',
+                maxDate: '2020-12-31',
                 dateLimit: {
-                    days: 60
+                    days: 90
                 },
                 showDropdowns: true,
                 showWeekNumbers: true,
@@ -164,6 +164,8 @@ var telamon = function () {
                     '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
                     '最近7天': [moment().subtract('days', 6), moment()],
                     '最近30天': [moment().subtract('days', 29), moment()],
+					'上周': [moment().day(-6), moment().day(0)],
+					'本周': [moment().day(1), moment().day(7)],
                     '本月': [moment().startOf('month'), moment().endOf('month')],
                     '上月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
                 },
@@ -174,12 +176,13 @@ var telamon = function () {
                 separator: ' 至 ',
                 locale: {
                     applyLabel: '查询',
+					cancelLabel: '取消',
                     fromLabel: '开始',
                     toLabel: '结束',
                     customRangeLabel: '自定义',
                     daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
                     monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
-                    firstDay: 7
+                    firstDay: 1
                 }
             },
             function (start, end) {
@@ -613,7 +616,7 @@ var telamon = function () {
 			
 			setInterval(function(){
 				$dom.html(moment().format('YYYY年MM月DD日 HH:mm:ss')); 
-			},1000);			
+			},1000);
 			
 		}
 	}
