@@ -46,6 +46,23 @@
                     <div class="portlet-body">
                         <div class="row">
                             <div class="col-md-12">
+                                <form action="#" class="form-horizontal form-bordered">
+                                    <div class="form-group ">
+                                        <label class="control-label col-md-offset-6 col-md-2">日期范围</label>
+                                        <div class="col-md-4">
+                                            <div id="statistic-range" class="btn default">
+                                                <i class="fa fa-calendar"></i>
+                                                &nbsp; <span>
+												</span>
+                                                <b class="fa fa-angle-down"></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
                                 <div id="container1" style="height: 500px;">
                                 </div>
                             </div>
@@ -64,6 +81,8 @@
     $(function() {
         telamon.leftNavActive($('#statistic-planning'));
 
+        telamon.initDatePicker();
+        telamon.initDateRangePicker($('#statistic-range'));
         telamon.initPlanningStatistic();
     });
 </script>

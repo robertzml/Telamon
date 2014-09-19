@@ -76,7 +76,7 @@ app.use(function(err, req, res, next) {
 });
 
 app.locals.momentDateTime = function(datetime) {
-    return moment(datetime).format("YYYY-MM-DD hh:mm:ss");
+    return moment(datetime).format("YYYY-MM-DD HH:mm:ss");
 }
 
 app.locals.momentDate = function(date) {

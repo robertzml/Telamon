@@ -16,12 +16,16 @@ router.get('/planning', function(req, res) {
 
 router.get('/planningQuantity', function(req, res) {
 
-    var sql = "SELECT * FROM planning ORDER BY productionDate";
+    var startDate = req.query.startDate;
+    var endDate = req.query.endDate;
 
-    pool.query(sql, function(err, result) {
+    var sql = "SELECT * FROM planning WHERE productionDate BETWEEN ? AND ? ORDER BY productionDate";
+    var params = [ startDate, endDate ];
+
+    pool.query(sql, params, function(err, result) {
 
         for(var i = 0; i < result.length; i++) {
-            result[i].productionDate = new Date(result[i].productionDate);
+            result[i].productionDate = moment(result[i].productionDate).format('YYYY-MM-DD');
         }
         res.json(result);
     });

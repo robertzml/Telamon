@@ -127,7 +127,76 @@ var telamon = function () {
 		return oTable;
 	}
 	
+	var handleDatePickers = function () {
+
+        if (jQuery().datepicker) {
+            $('.date-picker').datepicker({
+				format: "yyyy-mm-dd",
+				language: "zh-CN",
+                weekStart: 7,
+                autoclose: true
+            });
+        }
+    }
 	
+	
+    var handleDateRangePickers = function ($dom, callback) {
+        if (!jQuery().daterangepicker) {
+            return;
+        }
+
+        $dom.daterangepicker({
+                opens: 'left',
+                startDate: moment().subtract('days', 29),
+                endDate: moment(),
+                minDate: '2014-01-01',
+                maxDate: '2018-12-31',
+                dateLimit: {
+                    days: 60
+                },
+                showDropdowns: true,
+                showWeekNumbers: true,
+                timePicker: false,
+                timePickerIncrement: 1,
+                timePicker12Hour: true,
+                ranges: {
+                    '今天': [moment(), moment()],
+                    '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
+                    '最近7天': [moment().subtract('days', 6), moment()],
+                    '最近30天': [moment().subtract('days', 29), moment()],
+                    '本月': [moment().startOf('month'), moment().endOf('month')],
+                    '上月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+                },
+                buttonClasses: ['btn'],
+                applyClass: 'green',
+                cancelClass: 'default',
+                format: 'YYYY-MM-DD',
+                separator: ' 至 ',
+                locale: {
+                    applyLabel: '查询',
+                    fromLabel: '开始',
+                    toLabel: '结束',
+                    customRangeLabel: '自定义',
+                    daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+                    monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                    firstDay: 7
+                }
+            },
+            function (start, end) {
+                $dom.find('span').html(start.format('YYYY-MM-DD') + ' 至 ' + end.format('YYYY-MM-DD'));
+            }
+        ).on('apply.daterangepicker', function(ev, picker) {
+			console.log(picker.startDate.format('YYYY-MM-DD'));
+			console.log(picker.endDate.format('YYYY-MM-DD'));
+			callback(picker.startDate.format('YYYY-MM-DD'), picker.endDate.format('YYYY-MM-DD'));
+		});
+		
+        //Set the initial state of the picker label
+		$dom.find('span').html(moment().subtract('days', 29).format('YYYY-MM-DD') + ' 至 ' + moment().format('YYYY-MM-DD'));
+		callback(moment().subtract('days', 29).format('YYYY-MM-DD'), moment().format('YYYY-MM-DD'));
+    }
+
+
 	var handlePlanningStatistic = function(data) {
 		var option = {
 			chart: {
@@ -142,7 +211,6 @@ var telamon = function () {
 				type: 'datetime',
 				labels: {
 					formatter:function(){
-						//var date = new Date(this.value);
 						return Highcharts.dateFormat('%Y-%m-%d', this.value);
 					}
 				}
@@ -163,8 +231,8 @@ var telamon = function () {
 			credits: {
 				enabled: false
 			},
-			tooltip: {    
-				shared : true,  
+			tooltip: {
+				shared : true,
 				xDateFormat: '%Y-%m-%d'
 			},  
 			plotOptions: {
@@ -188,37 +256,15 @@ var telamon = function () {
 			}]
 		};
 
-		/*var minDate = moment(data[0].productionDate);
-		var maxDate = moment(data[data.length - 1].productionDate);
-		var start = moment(data[0].productionDate);
-		var index = 0;
-		
-		for (; start.isBefore(maxDate);) {
-			//option.xAxis.categories.push(start.format("YYYY-MM-DD"));			
-			//option.xAxis.categories.push(start.toDate());
-			var current = moment(data[index].productionDate);
-			if (current.isSame(start)) {
-				if (data[index].productionBatch == 1) {
-					option.series[0].data.push(name: '', data: data[index].quantity);
-				}
-				else {
-					option.series[1].data.push(data[index].quantity);
-				}
-				index++;
-			} else {			
-			
-				start.add(1, 'days');
-			}
-			//start.add(1, 'days');
-		}*/
 		
 		$.each(data, function(i, item) {
-			var d = new Date(item.productionDate);
+			var s = moment(item.productionDate);
+			var d = Date.UTC(s.year(), s.month(), s.date());
 			
 			if (item.productionBatch == 1) {
-				option.series[0].data.push([item.productionDate, item.quantity])
+				option.series[0].data.push([d, item.quantity])
 			} else {
-				option.series[1].data.push([item.productionDate, item.quantity]);
+				option.series[1].data.push([d, item.quantity]);
 			}
 		});
 		
@@ -508,11 +554,23 @@ var telamon = function () {
 		
 		
 		initPlanningStatistic: function() {
-			$.getJSON("/statistic/planningQuantity", function(response) {
+			/*$.getJSON("/statistic/planningQuantity", function(response) {
 				handlePlanningStatistic(response);
-			});			
+			});	*/	
 		},
-  
+		
+		initDatePicker: function() {
+			handleDatePickers();
+		},
+		
+		initDateRangePicker: function($dom, callback) {
+			handleDateRangePickers($dom, function(startDate, endDate) {
+			
+				$.getJSON("/statistic/planningQuantity", { startDate: startDate, endDate: endDate}, function(response) {
+					handlePlanningStatistic(response);
+				});	
+			});
+		},  
 		
 		loadPlanningDetails: function(id, $dom) {
 			$.getJSON("/planning/getDetails", { id: id }, function(response) {
@@ -559,7 +617,6 @@ var telamon = function () {
 			
 		}
 	}
-	
 
 }();
 
