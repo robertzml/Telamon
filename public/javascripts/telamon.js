@@ -127,10 +127,10 @@ var telamon = function () {
 		return oTable;
 	}
 	
-	var handleDatePickers = function () {
+	var handleDatePickers = function ($dom) {
 
         if (jQuery().datepicker) {
-            $('.date-picker').datepicker({
+            $dom.datepicker({
 				format: "yyyy-mm-dd",
 				language: "zh-CN",
                 weekStart: 7,
@@ -273,6 +273,64 @@ var telamon = function () {
 		
 		var chart1 = new Highcharts.Chart(option);
 	};
+	
+	
+	var socketMessge = function(message) {
+		$('#socket-message').text(message);
+	}
+	
+	var handleRealTimeData = function() {
+		var socket = io('http://localhost:4002');
+
+		socket.on('energy', function(data) {
+			socketMessge(''); 
+			$('div#today-water').text(data.energy.water);
+			$('div#today-electric').text(data.energy.electric);
+			$('div#today-gas').text(data.energy.gas);
+			$('div#today-rice').text(data.energy.rice);
+
+		});
+		
+		socket.on('production', function(data) {
+			$('b#current-production').text(data.production.count);
+			$('b#current-weight').text(data.production.count);
+		});
+		
+		socket.on('reconnect_failed', function() { 
+			socketMessge("设备重连失败."); 
+		});
+		
+		socket.on('connect_error', function() {
+			socketMessge('设备连接失败.');
+		});
+		
+		socket.on('connect_timeout', function() {
+			socketMessge('设备连接超时.');
+		});
+	}
+	
+	var handleBaseCharge = function() {
+		$.getJSON("/parameter/getValues", function(response) {
+			$.each(response, function(i, item) {
+				switch(item.name) {
+					case 'electric-charge':
+						$('span#electric-charge').text(item.value);
+						break;
+					case 'water-charge':
+						$('span#water-charge').text(item.value);
+						break;
+					case 'gas-charge':
+						$('span#gas-charge').text(item.value);
+						break;
+					case 'rice-charge':
+						$('span#rice-charge').text(item.value);
+						break;
+				}
+			});
+			
+		});
+	}
+	
 	
 	return {
 		leftNavActive: function($dom) {
@@ -562,8 +620,8 @@ var telamon = function () {
 			});	*/	
 		},
 		
-		initDatePicker: function() {
-			handleDatePickers();
+		initDatePicker: function($dom) {
+			handleDatePickers($dom);
 		},
 		
 		initDateRangePicker: function($dom, callback) {
@@ -575,6 +633,7 @@ var telamon = function () {
 			});
 		},  
 		
+		// call in planning details
 		loadPlanningDetails: function(id, $dom) {
 			$.getJSON("/planning/getDetails", { id: id }, function(response) {
 				$.each(response, function(i, item) {
@@ -587,19 +646,29 @@ var telamon = function () {
 			});
 		},
 		
+		getDashboardRealTimeData: function() {
+			handleRealTimeData();
+		},
 		
-		loadDashboardPlanningDetails: function(id, $dom) {
-			$.getJSON("/planning/getDetails", { id: id }, function(response) {
-
+		loadDashboardCharges: function() {
+			handleBaseCharge();
+		},
+		
+		loadDashboardPlanningDetails: function($dom) {
+			$.getJSON("/planning/getCurrentDetails", function(response) {
+				var total = 0;
+				
 				for (var i = 0; i < response.length; i = i + 2) {
 
 					var name1 =	$("<td/>").append(response[i].name);
 					var quantity1 = $("<td/>").append(response[i].quantity + " 箱");
-
+					total += response[i].quantity;
+					
 					var name2, quantity2;
 					if (i + 1 < response.length) {
 						name2 =	$("<td/>").append(response[i + 1].name);
 						quantity2 = $("<td/>").append(response[i + 1].quantity + " 箱");
+						total += response[i + 1].quantity;
 					} else  {
 						name2 =	$("<td/>");
 						quantity2 = $("<td/>");
@@ -609,6 +678,14 @@ var telamon = function () {
 					$dom.append(row);
 				}
 				
+				$('#total-planning').text(total);
+				
+				var date = moment();
+				if (date.hour() < 12) {
+					$('small#production-batch').text('上午');
+				} else {
+					$('small#production-batch').text('下午');
+				}
 			});
 		},
 		

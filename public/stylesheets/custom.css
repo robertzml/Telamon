@@ -114,7 +114,7 @@ body, h1, h2, h3, h4, h5, h6 , .label, .page-title, .dropdown-menu {
 /*Pricing Content*/
 .pricing-content li {
   color: #888;
-  font-size: 12px;
+  font-size: 14px;
   padding: 7px 15px;
   border-bottom: solid 1px #f5f9e7;
 }

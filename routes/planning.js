@@ -154,4 +154,37 @@ router.get('/getDetails', function(req, res) {
 
 });
 
+// call in dashboard
+router.get('/getCurrentDetails', function(req, res) {
+    var date = moment();
+    var hour = date.hour();
+
+    var batch;
+    if (hour < 12) {
+        batch = 1;
+    } else {
+        batch = 2;
+    }
+
+    var sql = "SELECT * FROM planning WHERE productionDate = ? AND productionBatch = ?";
+    var param = [ date.format('YYYY-MM-DD'), batch ];
+
+    pool.query(sql, param, function(err, result) {
+        if (err) throw err;
+
+        if (result.length == 0)
+            res.json({});
+        else {
+            sql = "SELECT * FROM planningDetails LEFT JOIN dining on planningDetails.targetId = dining.id WHERE planningId = ?";
+            param = [ result[0].id ];
+
+            pool.query(sql, param, function(err, rows) {
+                if (err) throw err;
+
+                res.json(rows);
+            });
+        }
+    });
+});
+
 module.exports = router;

@@ -13,6 +13,7 @@ var dashboard = require('./routes/dashboard');
 var planning = require('./routes/planning');
 var dining = require('./routes/dining');
 var statistic = require('./routes/statistic');
+var parameter = require('./routes/parameter');
 
 var app = express();
 
@@ -43,6 +44,7 @@ app.use('/dashboard', dashboard);
 app.use('/planning', planning);
 app.use('/dining', dining);
 app.use('/statistic', statistic);
+app.use('/parameter', parameter);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

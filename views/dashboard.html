@@ -69,10 +69,14 @@
             <div class="page-content">
                 <!-- BEGIN PAGE HEADER-->
                 <div class="row">
-                    <div class="col-md-8 col-lg-8">
+                    <div class="col-md-4 col-lg-4">
                         <h3 class="page-title">
                             实时成本核算 <small>每日用能&amp;产出</small>
                         </h3>
+                    </div>
+                    <div class="col-md-4 col-lg-4">
+                        <h4 class="text-danger" id="socket-message">
+                        </h4>
                     </div>
                     <div class="col-md-4 col-lg-4">
                         <h3 class="page-title pull-right" id="current-time"></h3>
@@ -169,8 +173,8 @@
                             <div class="portlet-body">
                                 <div class="pricing">
                                     <div class="pricing-head">
-                                        <h3>食堂预订</h3>
-                                        <h4><b>300</b> / 920<span>完成 / 计划</span></h4>
+                                        <h3>食堂预订 <small id="production-batch" class="font-purple">上午</small></h3>
+                                        <h4><b id="current-production">0</b> / <b id="total-planning">0</b><span>完成 / 计划</span></h4>
                                     </div>
                                     <table class="pricing-content table table-bordered">
                                         <tbody id="planning-details">
@@ -194,9 +198,9 @@
                                     </div>
 
                                     <ul class="pricing-content list-unstyled">
-                                        <li><i class="fa fa-tags"></i> 水：1.05 元/吨, 电：0.5元/度</li>
-                                        <li><i class="fa fa-asterisk"></i> 气：2.4元/方，米：41元/袋</li>
-                                        <li><i class="fa fa-heart"></i> 饭：200元/箱</li>
+                                        <li style="font-size:24px;"><i class="fa fa-ticket" style="font-size:24px;"></i> 当前称重：<b id="current-weight"></b>千克</li>
+                                        <li><i class="fa fa-dollar"></i> 水：<span id="water-charge"></span>元/吨， 电：<span id="electric-charge"></span>元/度</li>
+                                        <li><i class="fa fa-eur"></i> 气：<span id="gas-charge"></span>元/方，米：<span id="rice-charge"></span>元/千克</li>
                                     </ul>
                                 </div>
                             </div>
@@ -231,9 +235,7 @@
                                     <div class="col-md-4">
                                         <div class="easy-pie-chart">
                                             <div class="number transactions" data-percent="55"><span>55</span>%</div>
-                                            <a class="title" href="#">
-                                                用水
-                                            </a>
+                                            <a class="title" href="#">用水</a>
                                         </div>
                                     </div>
                                     <div class="margin-bottom-10 visible-sm"></div>
@@ -340,19 +342,11 @@
             telamon.initMiniCharts();
             telamon.initColumn();
 
-            telamon.loadDashboardPlanningDetails(15, $('#planning-details'));
+            telamon.loadDashboardCharges();
+            telamon.loadDashboardPlanningDetails($('#planning-details'));
             telamon.setDashboardTime($('#current-time'));
 
-            var socket = io('http://localhost:4002');
-
-            socket.on('energy', function(data) {
-
-                $('div#today-water').text(data.energy.water);
-                $('div#today-electric').text(data.energy.electric);
-                $('div#today-gas').text(data.energy.gas);
-                $('div#today-rice').text(data.energy.rice);
-
-            });
+            telamon.getDashboardRealTimeData();
 
         });
     </script>
