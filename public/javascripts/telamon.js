@@ -279,16 +279,38 @@ var telamon = function () {
 		$('#socket-message').text(message);
 	}
 	
+	/*var getEnergyData = function(type, data, callback) {
+		$.getJSON("/dashboard/energy", { type: type, data: data }, function(response) {
+			callback(response.data);
+		});
+	}*/
+	
 	var handleRealTimeData = function() {
 		var socket = io('http://localhost:4002');
 
 		socket.on('energy', function(data) {
 			socketMessge(''); 
-			$('div#today-water').text(data.energy.water);
-			$('div#today-electric').text(data.energy.electric);
-			$('div#today-gas').text(data.energy.gas);
-			$('div#today-rice').text(data.energy.rice);
 
+			$.getJSON("/dashboard/energy", function(response) {
+				$.each(response.data, function(i, item) {
+					var start = item.readData;
+					switch(item.type) {
+						case 1:
+							$('div#today-water').text(data.energy.water - start);
+							break;
+						case 2:
+							$('div#today-electric').text(data.energy.electric - start);
+							break;
+						case 3:
+							$('div#today-gas').text(data.energy.gas - start);
+							break;
+						case 4:
+							$('div#today-rice').text(data.energy.rice - start);
+							break;
+					}
+				});
+				
+			});
 		});
 		
 		socket.on('production', function(data) {
