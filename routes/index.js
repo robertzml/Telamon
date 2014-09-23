@@ -16,7 +16,7 @@ router.get('/test', function(req, res) {
 
 router.get('/test-weight', function(req, res) {
 
-    var date = moment().format("YYYY-MM-DD");
+    var date = moment('2014-05-20').format("YYYY-MM-DD");
 
     var weight = 120;
     for (var i = 0; i < 500; i++) {
@@ -37,7 +37,7 @@ router.get('/test-energy', function(req, res) {
     var date = moment().toDate();
 
     var sql = "INSERT INTO realEnergy(type, readData, accumulation, readTime, startType) VALUES(?, ?, ?, ?, ?)";
-    var params = [1, 15.2, 0, date, 4];
+    var params = [2, 7.0, 0, date, 1];
 
     pool.query(sql, params, function(err, result) {
         if (err) throw err;

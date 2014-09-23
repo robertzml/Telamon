@@ -8,7 +8,7 @@ router.get('/', function(req, res) {
 });
 
 
-/* dashboard real energy data */
+/* dashboard real energy data, get the start value */
 router.get('/energy', function(req,res) {
 
     var date = moment();

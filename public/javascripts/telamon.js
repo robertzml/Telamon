@@ -214,7 +214,7 @@ var telamon = function () {
 				type: 'datetime',
 				labels: {
 					formatter:function(){
-						return Highcharts.dateFormat('%Y-%m-%d', this.value);
+						return Highcharts.dateFormat('%m-%d', this.value);
 					}
 				}
 			},
@@ -279,11 +279,24 @@ var telamon = function () {
 		$('#socket-message').text(message);
 	}
 	
-	/*var getEnergyData = function(type, data, callback) {
-		$.getJSON("/dashboard/energy", { type: type, data: data }, function(response) {
-			callback(response.data);
-		});
-	}*/
+	//calculate the cost by page display value
+	var calculateCost = function() {
+		var count = parseInt($('b#current-production').text());
+		
+		var water = parseFloat($('div#today-water').text());
+		var electric = parseFloat($('div#today-electric').text());
+		var gas = parseFloat($('div#today-gas').text());
+		var rice = parseFloat($('div#today-rice').text());
+		
+		var water_charge = parseFloat($('span#water-charge').text());
+		var electric_charge = parseFloat($('span#electric-charge').text());
+		var gas_charge = parseFloat($('span#gas-charge').text());
+		var rice_charge = parseFloat($('span#rice-charge').text());
+		
+		var price = (water * water_charge + electric * electric_charge + gas * gas_charge + rice * rice_charge) / count;
+		
+		$('b#current-cost').text(price.toFixed(2));
+	}
 	
 	var handleRealTimeData = function() {
 		var socket = io('http://localhost:4002');
@@ -316,6 +329,7 @@ var telamon = function () {
 		socket.on('production', function(data) {
 			$('b#current-production').text(data.production.count);
 			$('b#current-weight').text(data.production.count);
+			calculateCost();
 		});
 		
 		socket.on('reconnect_failed', function() { 
@@ -646,7 +660,7 @@ var telamon = function () {
 			handleDatePickers($dom);
 		},
 		
-		initDateRangePicker: function($dom, callback) {
+		initDateRangePicker: function($dom) {
 			handleDateRangePickers($dom, function(startDate, endDate) {
 			
 				$.getJSON("/statistic/planningQuantity", { startDate: startDate, endDate: endDate}, function(response) {

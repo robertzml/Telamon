@@ -14,6 +14,23 @@ router.get('/planning', function(req, res) {
 });
 
 
+// make one batch inventory
+router.post('/make-inventory', function(req, res) {
+    var date = req.body.date;
+    var batch = req.body.batch;
+
+    var sql = "call make_inventory(?,?);";
+    var params = [ date, batch ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw err;
+
+        res.render('statistic/inventory');
+    });
+});
+
+
+/* statistic date range picker to select planning quantity */
 router.get('/planningQuantity', function(req, res) {
 
     var startDate = req.query.startDate;
