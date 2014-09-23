@@ -200,81 +200,6 @@ var telamon = function () {
     }
 
 
-	var handlePlanningStatistic = function(data) {
-		var option = {
-			chart: {
-				renderTo: 'container1',
-				type: 'column'
-			},
-			title: {
-				text: '米饭生产日计划总量'
-			},
-			xAxis: {
-				//categories:  [],
-				type: 'datetime',
-				labels: {
-					formatter:function(){
-						return Highcharts.dateFormat('%m-%d', this.value);
-					}
-				}
-			},
-			yAxis: {
-				min: 0,
-				title: {
-                    text: '计划量'
-                },
-                stackLabels: {
-                    enabled: true,
-                    style: {
-                        fontWeight: 'bold',
-                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
-                    }
-                }
-			},
-			credits: {
-				enabled: false
-			},
-			tooltip: {
-				shared : true,
-				xDateFormat: '%Y-%m-%d'
-			},  
-			plotOptions: {
-                column: {
-                    stacking: 'normal',
-                    dataLabels: {
-                        enabled: true,
-                        color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
-                        style: {
-                            textShadow: '0 0 3px black, 0 0 3px black'
-                        }
-                    }
-                }
-            },
-			series: [{
-				name: '上午',
-				data: []
-			}, {
-				name: '下午',
-				data: []
-			}]
-		};
-
-		
-		$.each(data, function(i, item) {
-			var s = moment(item.productionDate);
-			var d = Date.UTC(s.year(), s.month(), s.date());
-			
-			if (item.productionBatch == 1) {
-				option.series[0].data.push([d, item.quantity])
-			} else {
-				option.series[1].data.push([d, item.quantity]);
-			}
-		});
-		
-		var chart1 = new Highcharts.Chart(option);
-	};
-	
-	
 	var socketMessge = function(message) {
 		$('#socket-message').text(message);
 	}
@@ -649,25 +574,156 @@ var telamon = function () {
 			var chart2 = new Highcharts.Chart(option);
 		},
 		
-		
-		initPlanningStatistic: function() {
-			/*$.getJSON("/statistic/planningQuantity", function(response) {
-				handlePlanningStatistic(response);
-			});	*/	
-		},
-		
+
 		initDatePicker: function($dom) {
 			handleDatePickers($dom);
 		},
 		
-		initDateRangePicker: function($dom) {
-			handleDateRangePickers($dom, function(startDate, endDate) {
+		initDateRangePicker: function($dom, callback) {
+			handleDateRangePickers($dom, callback);
+		}, 
+		
+		// init planning statistic chart 
+		loadPlanningStatistic: function(data) {
+			var option = {
+				chart: {
+					renderTo: 'container1',
+					type: 'column'
+				},
+				title: {
+					text: '米饭生产日计划总量'
+				},
+				xAxis: {
+					//categories:  [],
+					type: 'datetime',
+					labels: {
+						formatter:function(){
+							return Highcharts.dateFormat('%m-%d', this.value);
+						}
+					}
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: '计划量'
+					},
+					stackLabels: {
+						enabled: true,
+						style: {
+							fontWeight: 'bold',
+							color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+						}
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				tooltip: {
+					shared : true,
+					xDateFormat: '%Y-%m-%d'
+				},  
+				plotOptions: {
+					column: {
+						stacking: 'normal',
+						dataLabels: {
+							enabled: true,
+							color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white',
+							style: {
+								textShadow: '0 0 3px black, 0 0 3px black'
+							}
+						}
+					}
+				},
+				series: [{
+					name: '上午',
+					data: []
+				}, {
+					name: '下午',
+					data: []
+				}]
+			};
 			
-				$.getJSON("/statistic/planningQuantity", { startDate: startDate, endDate: endDate}, function(response) {
-					handlePlanningStatistic(response);
-				});	
+			$.each(data, function(i, item) {
+				var s = moment(item.productionDate);
+				var d = Date.UTC(s.year(), s.month(), s.date());
+				
+				if (item.productionBatch == 1) {
+					option.series[0].data.push([d, item.quantity])
+				} else {
+					option.series[1].data.push([d, item.quantity]);
+				}
 			});
-		},  
+			
+			var chart1 = new Highcharts.Chart(option);
+		},
+		
+		// init cost statistic chart
+		loadCostStatistic: function(data) {
+			var option = {
+				chart: {
+					renderTo: 'container1',
+					type: 'line'
+				},
+				title: {
+					text: '米饭生产成本曲线'
+				},
+				xAxis: {
+					type: 'datetime',
+					labels: {
+						formatter:function(){
+							return Highcharts.dateFormat('%m-%d', this.value);
+						}
+					}
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: '费用'
+					},
+					stackLabels: {
+						enabled: true,
+						style: {
+							fontWeight: 'bold',
+							color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+						}
+					}
+				},
+				credits: {
+					enabled: false
+				},
+				tooltip: {
+					shared : true,
+					xDateFormat: '%Y-%m-%d'
+				},  
+				plotOptions: {
+					line: {
+						dataLabels: {
+							enabled: true
+						}
+					}
+				},
+				series: [{
+					name: '上午',
+					data: []
+				}, {
+					name: '下午',
+					data: []
+				}]
+			};
+			
+			$.each(data, function(i, item) {
+				var s = moment(item.productionDate);
+				var d = Date.UTC(s.year(), s.month(), s.date());
+				
+				if (item.batch == 1) {
+					option.series[0].data.push([d, item.averageCost])
+				} else {
+					option.series[1].data.push([d, item.averageCost]);
+				}
+			});
+			
+			var chart1 = new Highcharts.Chart(option);
+		},
 		
 		// call in planning details
 		loadPlanningDetails: function(id, $dom) {
