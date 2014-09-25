@@ -2,711 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de4eaabb-1bae-4513-8216-669a9fa8b6dd" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\avatar1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\avatar1_small.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\avatar2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\avatar3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\avatar3_small.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\logo_azteca.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\logo_conquer.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\logo_metronic.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\photo1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\photo2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\profile-img.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\profile-img.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\profile\profile.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\search\1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\search\2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\search\img1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\search\img2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\search\img3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\works\img1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\works\img2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\works\img3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\works\img4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\works\img5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\admin\pages\media\works\img6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\aboutme.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\amazon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\behance.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\blogger.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\deviantart.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\dribbble.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\dropbox.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\evernote.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\facebook.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\flickr.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\forrst.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\foursquare.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\github.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\googleplus.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\gravatar.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\instagram.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\jolicloud.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\klout.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\last-fm.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\linkedin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\myspace.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\picasa.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\pintrest.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\quora.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\reddit.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\rss.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\skype.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\spotify.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\stumbleupon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\tumblr.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\twitter.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\vimeo.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\vk.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\wordpress.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\xing.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\yahoo.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\img\social\youtube.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-pwstrength\GPL-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-pwstrength\MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-pwstrength\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-pwstrength\pwstrength-bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-pwstrength\pwstrength-bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-ca-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-cs-CZ.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-de-DE.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-es-ES.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-fa-IR.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-fr-FR.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-id-ID.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-it-IT.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-ja-JP.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-ko-KR.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-nb-NO.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-nl-NL.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-pl-PL.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-ro-RO.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-ru-RU.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-sv-SE.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-tr-TR.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-uk-UA.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-vi-VN.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\lang\summernote-zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\summernote.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\summernote.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-summernote\summernote.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-timepicker\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-timepicker\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-timepicker\css\bootstrap-timepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-timepicker\css\bootstrap-timepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-timepicker\js\bootstrap-timepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-timepicker\js\bootstrap-timepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-toastr\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-toastr\toastr-icon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-toastr\toastr.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-toastr\toastr.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-toastr\toastr.less" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-toastr\toastr.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-toastr\toastr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\bootstrap-toastr\toastr.min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\css\bootstrapTheme.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\css\custom.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\css\responsive.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\ico\apple-touch-icon-114-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\ico\apple-touch-icon-144-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\ico\apple-touch-icon-57-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\ico\apple-touch-icon-72-precomposed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\ico\favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\AjaxLoader.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\controls.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\css3.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\feather.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\grab.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\modern.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\multi.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\responsive.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\tons.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\touch.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\demo-slides\zombie.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\glyphicons-halflings-green.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\glyphicons-halflings-white.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\glyphicons-halflings.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\img\owl-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\js\application.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\js\bootstrap-collapse.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\js\bootstrap-tab.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\js\bootstrap-transition.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\js\google-code-prettify\prettify.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\js\google-code-prettify\prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\js\google-code-prettify\run_prettify.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\assets\js\jquery-1.9.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\changelog.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\fullimage1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\fullimage2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\fullimage3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\fullimage4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\fullimage5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\fullimage6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\fullimage7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\owl1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\owl2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\owl3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\owl4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\owl5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\owl6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\owl7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\assets\owl8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\autoHeight.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\click.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\custom.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\customJson.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\full.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\images.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\itemsCustom.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\json.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\json\customData.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\json\data.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\lazyLoad.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\manipulations.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\navOnTop.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\navOnTop2.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\one.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\owlStatus.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\progressBar.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\randomOrder.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\scaleup.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\sync.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\demos\transitions.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\index.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\owl-carousel\AjaxLoader.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\owl-carousel\grabbing.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\owl-carousel\owl.carousel.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\owl-carousel\owl.carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\owl-carousel\owl.carousel.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\owl-carousel\owl.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\carousel-owl-carousel\owl-carousel\owl.transitions.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\adapters\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\build-config.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\ckeditor.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\config.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\contents.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\lang\en.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\lang\zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\about\dialogs\about.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\about\dialogs\logo_ckeditor.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\clipboard\dialogs\paste.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\colordialog\dialogs\colordialog.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\dialog\dialogDefinition.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\div\dialogs\div.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\find\dialogs\find.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\flash\dialogs\flash.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\flash\images\placeholder.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\dialogs\button.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\dialogs\checkbox.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\dialogs\form.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\dialogs\hiddenfield.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\dialogs\radio.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\dialogs\select.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\dialogs\textarea.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\dialogs\textfield.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\forms\images\hiddenfield.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\icons.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\iframe\dialogs\iframe.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\iframe\images\placeholder.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\image\dialogs\image.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\image\images\noimage.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\link\dialogs\anchor.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\link\dialogs\link.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\link\images\anchor.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\link\images\hidpi\anchor.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\liststyle\dialogs\liststyle.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\magicline\images\hidpi\icon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\magicline\images\icon.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\pagebreak\images\pagebreak.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\pastefromword\filter\default.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\preview\preview.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\scayt\LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\scayt\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\scayt\dialogs\options.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\scayt\dialogs\toolbar.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_address.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_blockquote.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_div.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_h1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_h2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_h3.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_h4.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_h5.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_h6.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_p.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\showblocks\images\block_pre.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\dialogs\smiley.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\angel_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\angel_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\angry_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\angry_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\broken_heart.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\broken_heart.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\confused_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\confused_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\cry_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\cry_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\devil_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\devil_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\embaressed_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\embarrassed_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\embarrassed_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\envelope.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\envelope.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\heart.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\heart.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\kiss.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\kiss.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\lightbulb.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\lightbulb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\omg_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\omg_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\regular_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\regular_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\sad_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\sad_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\shades_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\shades_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\teeth_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\teeth_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\thumbs_down.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\thumbs_down.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\thumbs_up.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\thumbs_up.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\tongue_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\tongue_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\tounge_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\wink_smile.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\smiley\images\wink_smile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\ar.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\bg.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\ca.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\cs.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\cy.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\de.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\el.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\en.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\eo.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\es.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\et.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\fa.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\fi.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\fr.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\gl.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\he.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\hr.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\hu.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\id.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\it.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\ja.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\km.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\ku.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\lv.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\nb.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\nl.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\no.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\pl.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\pt.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\ru.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\si.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\sk.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\sl.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\sq.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\sv.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\th.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\tr.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\tt.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\ug.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\uk.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\vi.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\lang\zh.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\specialchar\dialogs\specialchar.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\table\dialogs\table.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\tabletools\dialogs\tableCell.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\templates\dialogs\templates.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\templates\dialogs\templates.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\templates\templates\default.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\templates\templates\images\template1.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\templates\templates\images\template2.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\templates\templates\images\template3.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\wsc\LICENSE.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\wsc\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\wsc\dialogs\ciframe.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\wsc\dialogs\wsc.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\wsc\dialogs\wsc.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\plugins\wsc\dialogs\wsc_ie.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\dialog_ie.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\dialog_ie7.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\dialog_ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\dialog_iequirks.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\editor.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\editor_gecko.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\editor_ie.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\editor_ie7.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\editor_ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\editor_iequirks.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\icons.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\icons_hidpi.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\arrow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\close.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\hidpi\close.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\hidpi\lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\hidpi\lock.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\hidpi\refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\lock-open.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\lock.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\images\refresh.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\skins\moono\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\ckeditor\styles.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.colorhelpers.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.colorhelpers.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.canvas.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.canvas.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.categories.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.categories.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.crosshair.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.crosshair.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.errorbars.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.errorbars.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.fillbetween.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.fillbetween.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.image.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.image.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.navigate.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.navigate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.pie.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.pie.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.resize.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.resize.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.selection.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.selection.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.stack.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.stack.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.symbol.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.symbol.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.threshold.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.threshold.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.time.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\flot\jquery.flot.time.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\fullcalendar\fullcalendar.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\fullcalendar\fullcalendar.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\fullcalendar\fullcalendar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\fullcalendar\fullcalendar.print.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\fullcalendar\gcal.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\blueimp-gallery\blueimp-gallery.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\blueimp-gallery\jquery.blueimp-gallery.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\cors\postmessage.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\cors\result.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\css\demo-ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\css\demo.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\css\jquery.fileupload-noscript.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\css\jquery.fileupload-ui-noscript.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\css\jquery.fileupload-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\css\jquery.fileupload.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\img\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\img\progressbar.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\app.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\cors\jquery.postmessage-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\cors\jquery.xdr-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload-angular.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload-audio.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload-image.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload-jquery-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload-process.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload-ui.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload-validate.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload-video.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.fileupload.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\jquery.iframe-transport.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\main.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\vendor\canvas-to-blob.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\vendor\jquery.ui.widget.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\vendor\load-image.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-file-upload\js\vendor\tmpl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-notific8\README.md" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-notific8\_notific8.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-notific8\_themes.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-notific8\jquery.notific8.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-notific8\jquery.notific8.min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-notific8\jquery.notific8.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-notific8\jquery.notific8.scss" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\jquery-notific8\notific8.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\css\blank.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\css\layerslider.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\js\greensock.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\js\jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\js\layerslider.kreaturamedia.jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\js\layerslider.transitions.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark3d\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark3d\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark3d\shadow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark3d\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark3d\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark\shadow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlessdark\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight3d\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight3d\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight3d\shadow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight3d\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight3d\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight\shadow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\borderlesslight\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\carousel\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\carousel\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\carousel\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\carousel\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\darkskin\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\darkskin\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\darkskin\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\darkskin\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\defaultskin\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\defaultskin\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\defaultskin\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\defaultskin\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\fullwidth\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\fullwidth\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\fullwidth\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\fullwidth\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\fullwidthdark\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\fullwidthdark\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\fullwidthdark\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\fullwidthdark\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\glass\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\glass\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\glass\shadow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\glass\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\glass\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\lightskin\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\lightskin\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\lightskin\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\lightskin\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\minimal\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\minimal\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\minimal\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\minimal\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\noskin\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\noskin\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\noskin\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\noskin\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\v5\loading.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\v5\nothumb.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\v5\skin.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-layer-slider\skins\v5\skin.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\css\extralayers.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\css\navstylechange.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\css\noneed.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\css\style.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\home-boxed.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\home-fullscreen.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\home-fullwidth.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\3dbg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\3dlayer_1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\3dlayer_2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\3dlayer_3.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\3dlayer_4.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\3dlayer_5.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\3dlayer_6.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\apple.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\bg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\bg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\bg3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\bg4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\boat.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\check.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\citybg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\clock.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\clock2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\cloud1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\cloud2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\cloud3.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\cloud4.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\coconuts.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\cycle1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\darkblurbg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\doublearrow2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\dummy.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\forest1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide1-320x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide2-320x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide6-320x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide7-320x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide8-320x200.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\fullslide8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\glare.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\graph.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\greenbg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\greyline.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\guy1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\guy2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\guy3.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\guy4.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\guy5.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\hand1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\hill1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\hill2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\hill3.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\hill4.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\homeslider_thumb1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\homeslider_thumb2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\homeslider_thumb3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\homeslider_thumb4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\homeslider_thumb5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\homeslider_thumb6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\huge.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\icon_photo.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\imac1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\ipad2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\ipad_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\iphone.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\island.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\kenburns1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\kenburns2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\kenburns3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\kenburns4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\kenburns5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\laptopmockup_sliderdy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\largegreen.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\logo.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\lupe_imac.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\lupe_macbook.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\macbook2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\newslide2014_1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\newwave1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\newwave2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\newwave32.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\newwave4.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\palm1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\palm2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\parallax_thumb1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\parallax_thumb2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\parallax_thumb3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\parallax_thumb4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\plate1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\plate2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\prebg.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\pulse1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\redbg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\redbg.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\redbg_big.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\seabg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\slidebg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\slidebg1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\slidebg2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\star.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\sun.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\trans_tile2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\transparent.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\tree.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\video_forest.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\videobg1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\videoshadow.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\woman.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\images\woman1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\panzoom-boxed.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\panzoom-fullscreen.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\panzoom-fullwidth.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\parallax-scene.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\parallax-scroll.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrow_large_left.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrow_large_right.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrow_left.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrow_left2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrow_right.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrow_right2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrowleft.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrowright.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\arrows.psd" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\black50.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\boxed_bgtile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\bullet_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\bullets.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\bullets.psd" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\bullets2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\coloredbg.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\grain.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\gridtile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\gridtile_3x3.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\gridtile_3x3_white.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\gridtile_white.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\large_left.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\large_right.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\loader2.gif" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\navigdots.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\navigdots_bgtile.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\shadow1.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\shadow2.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\shadow3.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\small_arrows.psd" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\small_left.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\small_left_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\small_right.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\small_right_boxed.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\timer.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\timerdot.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\transparent.jpg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\assets\white50.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\css\settings-ie8.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\css\settings.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\font\revicons.eot" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\font\revicons.svg" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\font\revicons.ttf" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\font\revicons.woff" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\images\decor_inside.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\images\decor_inside_white.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\images\decor_testimonial.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\images\gradient\g30.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\images\gradient\g40.png" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\js\jquery.themepunch.plugins.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\js\jquery.themepunch.revolution.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\js\jquery.themepunch.revolution.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\rs-plugin\js\jquery.themepunch.tools.min.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\vertical-boxed.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\vertical-fullscreen.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\vertical-fullwidth.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\video-boxed.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\video-fullscreen.html" afterPath="" />
-      <change type="DELETED" beforePath="E:\Project\Telamon\public\assets\global\plugins\slider-revolution-slider\video-fullwidth.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/statistic/cost.html" afterPath="$PROJECT_DIR$/views/statistic/cost.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/planning/index.html" afterPath="$PROJECT_DIR$/views/planning/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/statistic/inventory.html" afterPath="$PROJECT_DIR$/views/statistic/inventory.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.html" afterPath="$PROJECT_DIR$/views/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/statistic.js" afterPath="$PROJECT_DIR$/routes/statistic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/telamon.js" afterPath="$PROJECT_DIR$/public/javascripts/telamon.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Telamon.iws" />
@@ -733,8 +34,8 @@
       <file leaf-file-name="statistic.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/statistic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="845" max-vertical-offset="1496">
-              <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1751">
+              <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -743,8 +44,21 @@
       <file leaf-file-name="inventory.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/statistic/inventory.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1581">
-              <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+            <state vertical-scroll-proportion="-15.461538" vertical-offset="210" max-vertical-offset="1581">
+              <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+              <folding>
+                <element signature="tag#h3#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.47532895" vertical-offset="0" max-vertical-offset="608">
+              <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -753,8 +67,18 @@
       <file leaf-file-name="planning.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/statistic/planning.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="1615">
-              <caret line="86" column="11" selection-start-line="82" selection-start-column="8" selection-end-line="86" selection-end-column="11" />
+            <state vertical-scroll-proportion="2.7692308" vertical-offset="888" max-vertical-offset="1615">
+              <caret line="48" column="71" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/planning/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.076923" vertical-offset="952" max-vertical-offset="2091">
+              <caret line="76" column="72" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
               <folding />
             </state>
           </provider>
@@ -763,18 +87,18 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1275">
+            <state vertical-scroll-proportion="-0.65384614" vertical-offset="221" max-vertical-offset="1275">
               <caret line="14" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cost.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="cost.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/statistic/cost.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46710527" vertical-offset="753" max-vertical-offset="1904">
-              <caret line="61" column="106" selection-start-line="61" selection-start-column="106" selection-end-line="61" selection-end-column="106" />
+            <state vertical-scroll-proportion="-3.7307692" vertical-offset="770" max-vertical-offset="1683">
+              <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -800,8 +124,6 @@
         <option value="$PROJECT_DIR$/views/planning/edit.html" />
         <option value="$PROJECT_DIR$/views/planning/create.html" />
         <option value="$PROJECT_DIR$/views/planning/details.html" />
-        <option value="$PROJECT_DIR$/views/planning/index.html" />
-        <option value="$PROJECT_DIR$/views/layout.html" />
         <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/routes/planning.js" />
         <option value="$PROJECT_DIR$/app.js" />
@@ -812,11 +134,13 @@
         <option value="$PROJECT_DIR$/views/dashboard.html" />
         <option value="$PROJECT_DIR$/routes/dashboard.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/statistic/inventory.html" />
         <option value="$PROJECT_DIR$/views/sidebar.html" />
         <option value="$PROJECT_DIR$/views/statistic/planning.html" />
-        <option value="$PROJECT_DIR$/routes/statistic.js" />
         <option value="$PROJECT_DIR$/views/statistic/cost.html" />
+        <option value="$PROJECT_DIR$/views/layout.html" />
+        <option value="$PROJECT_DIR$/routes/statistic.js" />
+        <option value="$PROJECT_DIR$/views/planning/index.html" />
+        <option value="$PROJECT_DIR$/views/statistic/inventory.html" />
       </list>
     </option>
   </component>
@@ -856,6 +180,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -936,7 +261,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1050,7 +374,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/routes/statistic.js</url>
+          <line>31</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="22" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1218,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35945272" vertical-offset="0" max-vertical-offset="804">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41324922" vertical-offset="6912" max-vertical-offset="9418">
@@ -1250,20 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="634">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/planning/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2091">
-          <caret line="86" column="57" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2316" max-vertical-offset="3043">
-          <caret line="160" column="4" selection-start-line="160" selection-start-column="4" selection-end-line="160" selection-end-column="82" />
         </state>
       </provider>
     </entry>
@@ -1306,13 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="1717">
           <caret line="67" column="70" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="805">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1381,43 +684,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="1275">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="221" max-vertical-offset="1275">
           <caret line="14" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/statistic/inventory.html">
+    <entry file="file://$PROJECT_DIR$/views/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1581">
-          <caret line="37" column="58" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.8042763" vertical-offset="480" max-vertical-offset="2380">
+          <caret line="57" column="48" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/statistic/planning.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="939" max-vertical-offset="1615">
-          <caret line="86" column="11" selection-start-line="82" selection-start-column="8" selection-end-line="86" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/statistic.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="845" max-vertical-offset="1496">
-          <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/statistic/cost.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46710527" vertical-offset="753" max-vertical-offset="1904">
-          <caret line="61" column="106" selection-start-line="61" selection-start-column="106" selection-end-line="61" selection-end-column="106" />
+        <state vertical-scroll-proportion="-3.7307692" vertical-offset="770" max-vertical-offset="1683">
+          <caret line="51" column="85" selection-start-line="51" selection-start-column="85" selection-end-line="51" selection-end-column="85" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/statistic.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="97" max-vertical-offset="1751">
+          <caret line="13" column="63" selection-start-line="13" selection-start-column="63" selection-end-line="13" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/statistic/planning.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.7692308" vertical-offset="888" max-vertical-offset="1615">
+          <caret line="48" column="71" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/planning/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.076923" vertical-offset="952" max-vertical-offset="2091">
+          <caret line="76" column="72" selection-start-line="76" selection-start-column="72" selection-end-line="76" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/statistic/inventory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.461538" vertical-offset="210" max-vertical-offset="1581">
+          <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
+          <folding>
+            <element signature="tag#h3#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#0;tag#div#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47532895" vertical-offset="0" max-vertical-offset="608">
+          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

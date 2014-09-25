@@ -134,6 +134,7 @@ var telamon = function () {
 				format: "yyyy-mm-dd",
 				language: "zh-CN",
                 weekStart: 7,
+				todayHighlight: true,
                 autoclose: true
             });
         }
@@ -596,6 +597,7 @@ var telamon = function () {
 				xAxis: {
 					//categories:  [],
 					type: 'datetime',
+					tickInterval: 24 * 3600 * 1000,
 					labels: {
 						formatter:function(){
 							return Highcharts.dateFormat('%m-%d', this.value);
@@ -659,6 +661,7 @@ var telamon = function () {
 		
 		// init cost statistic chart
 		loadCostStatistic: function(data) {
+			var colors = Highcharts.getOptions().colors;
 			var option = {
 				chart: {
 					renderTo: 'container1',
@@ -669,30 +672,41 @@ var telamon = function () {
 				},
 				xAxis: {
 					type: 'datetime',
+					tickInterval: 24 * 3600 * 1000,
 					labels: {
 						formatter:function(){
 							return Highcharts.dateFormat('%m-%d', this.value);
 						}
 					}
 				},
-				yAxis: {
-					min: 0,
+				yAxis: [{
 					title: {
-						text: '费用'
+						text: '费用(元/箱)'
 					},
 					stackLabels: {
 						enabled: true,
 						style: {
 							fontWeight: 'bold',
-							color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+							color: colors[0]
 						}
 					}
-				},
+				}, {
+					title: {
+						text: '总箱数'
+					},
+					opposite: true,
+					stackLabels: {
+						enabled: true,
+						style: {
+							fontWeight: 'bold',
+							color: colors[1]
+						}
+					}
+				}],
 				credits: {
 					enabled: false
 				},
 				tooltip: {
-					shared : true,
 					xDateFormat: '%Y-%m-%d'
 				},  
 				plotOptions: {
@@ -703,10 +717,20 @@ var telamon = function () {
 					}
 				},
 				series: [{
-					name: '上午',
+					yAxis: 0,
+					name: '上午成本',
 					data: []
 				}, {
-					name: '下午',
+					yAxis: 0,
+					name: '下午成本',
+					data: []
+				},{
+					yAxis: 1,
+					name: '上午产量',
+					data: []
+				}, {
+					yAxis: 1,
+					name: '下午产量',
 					data: []
 				}]
 			};
@@ -717,8 +741,10 @@ var telamon = function () {
 				
 				if (item.batch == 1) {
 					option.series[0].data.push([d, item.averageCost])
+					option.series[2].data.push([d, item.totalCount])
 				} else {
 					option.series[1].data.push([d, item.averageCost]);
+					option.series[3].data.push([d, item.totalCount])
 				}
 			});
 			
