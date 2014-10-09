@@ -90,6 +90,8 @@
                             <a href="#">今日能源资源消耗</a>
                         </li>
                     </ul>
+
+                    <span id="debug-message"></span>
                 </div>
                 <!-- END PAGE HEADER-->
 
@@ -292,7 +294,6 @@
     <script src="/assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
     <script src="/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
     <script src="/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-    <script src="/assets/global/plugins/moment-with-locales.min.js" type="text/javascript"></script>
     <!-- END CORE PLUGINS -->
     <!-- BEGIN PAGE LEVEL PLUGINS -->
     <script src="/assets/global/plugins/datatables/media/js/jquery.dataTables.min.js" type="text/javascript" ></script>
@@ -301,9 +302,6 @@
     <script src="/assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
     <script src="/assets/global/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.zh-CN.js" type="text/javascript"></script>
     <script src="/assets/global/plugins/moment.min.js" type="text/javascript"></script>
-    <script src="/assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-    <script src="/assets/global/plugins/jquery-validation/js/localization/messages_zh.js" type="text/javascript"></script>
-    <script src="/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
     <script src="/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
     <script src="/assets/global/plugins/Highcharts/highcharts.js" type="text/javascript"></script>
     <script src="/javascripts/socket.io-1.1.0.js" type="text/javascript"></script>
@@ -311,6 +309,7 @@
     <script src="/assets/global/scripts/metronic.js" type="text/javascript"></script>
     <script src="/assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
     <script src="/javascripts/telamon.js" type="text/javascript"></script>
+    <script src="/javascripts/dashboard.js" type="text/javascript"></script>
     <script>
         jQuery(document).ready(function() {
             Metronic.init(); // init metronic core components
@@ -320,19 +319,18 @@
     <!-- END JAVASCRIPTS -->
     <script type="text/javascript">
         $(function() {
-            telamon.leftNavActive($('#dashboard-index'));
 
-            telamon.initColumn();
+            dashboard.loadParameters();
+            dashboard.loadPlanningDetails($('#planning-details'));
 
-            telamon.loadDashboardCharges();
-            telamon.loadDashboardPlanningDetails($('#planning-details'));
+            dashboard.initColumn();
 
-            telamon.loadDashboardHistoryCost();
-            telamon.loadDashboardWeekCompare();
+            dashboard.loadDashboardHistoryCost();
+            dashboard.loadDashboardWeekCompare();
 
-            telamon.setDashboardTime($('#current-time'));
+            dashboard.displayTime($('#current-time'));
 
-            telamon.getDashboardRealTimeData();
+            dashboard.getDashboardRealTimeData();
 
         });
     </script>

@@ -3,10 +3,10 @@
 var mysql = require('mysql');
 
 var pool  = mysql.createPool({
-    host     : '192.168.56.102',
+    host     : '202.195.145.229',
     user     : 'root',
-    password : '123456',
-    database:'telamon',
+    password : 'nodejs0618',
+    database :'telamon',
     multipleStatements: true
 });
 

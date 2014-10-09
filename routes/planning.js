@@ -156,18 +156,11 @@ router.get('/getDetails', function(req, res) {
 
 // call in dashboard
 router.get('/getCurrentDetails', function(req, res) {
-    var date = moment();
-    var hour = date.hour();
-
-    var batch;
-    if (hour < 12) {
-        batch = 1;
-    } else {
-        batch = 2;
-    }
+    var date = req.query.date;
+    var batch = req.query.batch;
 
     var sql = "SELECT * FROM planning WHERE productionDate = ? AND productionBatch = ?";
-    var param = [ date.format('YYYY-MM-DD'), batch ];
+    var param = [ date, batch ];
 
     pool.query(sql, param, function(err, result) {
         if (err) throw err;
