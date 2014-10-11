@@ -51,4 +51,22 @@ router.get('/lastCost', function(req, res) {
     });
 });
 
+
+router.get('/getStartEnergy', function(req, res) {
+    var date = req.query.date;
+    var batch = req.query.batch;
+    var type = req.query.type;
+
+    var sql = "call get_start_energy(?,?,?, @a);";
+    var params = [ date, batch, type ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw err;
+
+        console.log(result);
+        console.log(result[0][0].r_value);
+        res.json(result[0][0].r_value);
+    });
+});
+
 module.exports = router;

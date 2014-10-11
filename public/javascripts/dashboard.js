@@ -54,7 +54,13 @@ var dashboard = function() {
 		var chart = new Highcharts.Chart(option);
 	}
 	
-		var socketMessge = function(message) {
+	var getStartEnergy = function(date, batch, type) {
+		$.getJSON("/dashboard/getStartEnergy", { date: date, batch: batch, type: type }, function(response) {
+			return response;
+		});
+	}
+	
+	var socketMessge = function(message) {
 		$('#socket-message').text(message);
 	}
 	
@@ -341,6 +347,9 @@ var dashboard = function() {
 			handleWeekCompare('week-gas', '用气');
 		},
 		
+		loadStart: function() {
+			getStartEnergy('2014-10-09', 1, 1);
+		},
 		
 		displayTime: function($dom) {
 			
