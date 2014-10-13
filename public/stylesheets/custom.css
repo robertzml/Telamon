@@ -12,6 +12,9 @@ body, h1, h2, h3, h4, h5, h6 , .label, .page-title, .dropdown-menu {
 	vertical-align: middle;
 }
 
+.dashboard-stat .visual {
+    width: 60px;
+}
 
 .dashboard-stat .title {
 	float:left;

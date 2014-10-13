@@ -4,28 +4,40 @@ var moment = require('moment');
 var pool = require('../models/pool');
 
 router.get('/', function(req, res) {
-    res.render('dashboard', { title: '实时界面' });
-});
+    var sql = "SELECT * FROM parameter";
 
-
-/* dashboard real energy data, get the start value */
-router.get('/energy', function(req,res) {
-
-    var date = moment();
-    var startType;
-    if (date.hour() < 12)
-        startType = 1;
-    else
-        startType = 4;
-
-    var sql = "SELECT * FROM realEnergy WHERE to_days(readTime) = to_days(now()) AND startType = ?";
-    var params = [ startType ];
-
-    pool.query(sql, params, function(err, result) {
+    pool.query(sql, function(err, result) {
         if (err) throw err;
 
-        res.json({data: result});
+        var morningStart, morningEnd, noonStart, noonEnd;
+        var batch;
+        var now = moment();
 
+        for (var i = 0; i < result.length; i++ ) {
+            switch(result[i].name) {
+                case 'morning-start':
+                    morningStart = moment(result[i].value, 'HH:mm:ss');
+                    break;
+                case 'morning-end':
+                    morningEnd = moment(result[i].value, 'HH:mm:ss');
+                    break;
+                case 'noon-start':
+                    noonStart = moment(result[i].value, 'HH:mm:ss');
+                    break;
+                case 'noon-end':
+                    noonEnd = moment(result[i].value, 'HH:mm:ss');
+                    break;
+            }
+        }
+
+        if (now.isAfter(morningStart) && now.isBefore(morningEnd))
+            batch = 1;
+        else if (now.isAfter(noonStart) && now.isBefore(noonEnd))
+            batch = 2;
+        else
+            batch = -1;
+
+        res.render('dashboard', { title: '实时界面', batch: batch });
     });
 
 });
@@ -63,9 +75,36 @@ router.get('/getStartEnergy', function(req, res) {
     pool.query(sql, params, function(err, result) {
         if (err) throw err;
 
-        console.log(result);
-        console.log(result[0][0].r_value);
         res.json(result[0][0].r_value);
+    });
+});
+
+// not called
+router.get('/getProduction', function(req, res) {
+    var date = req.query.date;
+    var batch = req.query.batch;
+
+    var sql = "SELECT COUNT(*) as count, SUM(weight) as weight FROM realWeight WHERE productionDate = ? AND batch = ?";
+    var params = [ date, batch ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw err;
+
+        res.json(result[0]);
+    });
+});
+
+router.get('/getRiceAmount', function(req, res) {
+    var date = req.query.date;
+    var batch = req.query.batch;
+
+    var sql = "call get_rice_amount(?, ?, @a)";
+    var params = [ date, batch ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw  err;
+
+        res.json(result[0][0].p_weight);
     });
 });
 

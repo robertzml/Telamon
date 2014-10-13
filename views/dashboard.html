@@ -74,8 +74,12 @@
                             实时成本核算 <small>每日用能&amp;产出</small>
                         </h3>
                     </div>
-                    <div class="col-md-4 col-lg-4">
+                    <div class="col-md-2 col-lg-2">
                         <h4 class="text-danger" id="socket-message">
+                        </h4>
+                    </div>
+                    <div class="col-md-2 col-lg-2">
+                        <h4 class="text-danger" id="error-message">
                         </h4>
                     </div>
                     <div class="col-md-4 col-lg-4">
@@ -319,21 +323,12 @@
     <!-- END JAVASCRIPTS -->
     <script type="text/javascript">
         $(function() {
+            var batch = '{{ batch }}';
+            dashboard.init(batch);
 
-            dashboard.loadParameters();
-            dashboard.loadPlanningDetails($('#planning-details'));
+            dashboard.initRealTime();
 
-            dashboard.initColumn();
-
-            dashboard.loadDashboardHistoryCost();
-            dashboard.loadDashboardWeekCompare();
-
-            dashboard.displayTime($('#current-time'));
-
-            dashboard.getDashboardRealTimeData();
-
-            dashboard.loadStart();
-
+            dashboard.initChart();
         });
     </script>
 </body>
