@@ -367,19 +367,11 @@ var telamon = function () {
 				},
 				series: [{
 					yAxis: 0,
-					name: '上午成本',
-					data: []
-				}, {
-					yAxis: 0,
-					name: '下午成本',
+					name: '成本',
 					data: []
 				},{
 					yAxis: 1,
-					name: '上午产量',
-					data: []
-				}, {
-					yAxis: 1,
-					name: '下午产量',
+					name: '产量',
 					data: []
 				}]
 			};
@@ -388,13 +380,10 @@ var telamon = function () {
 				var s = moment(item.productionDate);
 				var d = Date.UTC(s.year(), s.month(), s.date());
 				
-				if (item.batch == 1) {
-					option.series[0].data.push([d, item.averageCost])
-					option.series[2].data.push([d, item.totalCount])
-				} else {
-					option.series[1].data.push([d, item.averageCost]);
-					option.series[3].data.push([d, item.totalCount])
-				}
+				
+				option.series[0].data.push([d, item.averageCost]);
+				option.series[1].data.push([d, item.totalCount])
+				
 			});
 			
 			var chart1 = new Highcharts.Chart(option);

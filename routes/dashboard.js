@@ -43,26 +43,6 @@ router.get('/', function(req, res) {
 });
 
 
-// get the dashboard cost data by 30 days, return json
-router.get('/lastCost', function(req, res) {
-
-    var startDate = moment().subtract(30, "days").format("YYYY-MM-DD");
-    var endDate = moment().subtract(1, "days").format("YYYY-MM-DD");
-
-    var sql = "SELECT productionDate, sum(totalCount) as sumCount, sum(totalWeight) as sumWeight, ROUND(AVG(averageCost), 2) as avgCost FROM " +
-        "inventory WHERE productionDate BETWEEN ? AND ? group by productionDate ORDER BY productionDate";
-    var params = [ startDate, endDate ];
-
-    pool.query(sql, params, function(err, result) {
-        if (err) throw err;
-
-        for(var i = 0; i < result.length; i++) {
-            result[i].productionDate = moment(result[i].productionDate).format('YYYY-MM-DD');
-        }
-        res.json(result);
-    });
-});
-
 
 router.get('/getStartEnergy', function(req, res) {
     var date = req.query.date;
@@ -105,6 +85,62 @@ router.get('/getRiceAmount', function(req, res) {
         if (err) throw  err;
 
         res.json(result[0][0].p_weight);
+    });
+});
+
+
+// get the dashboard cost data by 30 days, return json
+router.get('/lastCost', function(req, res) {
+
+    var startDate = moment().subtract(30, "days").format("YYYY-MM-DD");
+    var endDate = moment().subtract(1, "days").format("YYYY-MM-DD");
+
+    var sql = "SELECT productionDate, totalCount, averageCost FROM " +
+        "inventory WHERE batch = 0 AND productionDate BETWEEN ? AND ? ORDER BY productionDate";
+    var params = [ startDate, endDate ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw err;
+
+        for(var i = 0; i < result.length; i++) {
+            result[i].productionDate = moment(result[i].productionDate).format('YYYY-MM-DD');
+        }
+        res.json(result);
+    });
+});
+
+// get the last week energy use
+router.get('/lastWeekEnergy', function(req, res) {
+
+    var batch = req.query.batch;
+    var date = moment().subtract(1, 'weeks').format("YYYY-MM-DD");
+
+    var sql = "SELECT waterAmount, electricAmount, gasAmount FROM inventory WHERE batch = ? AND productionDate = ?"
+    var params = [ batch, date ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw err;
+
+        if (result.length == 0) {
+            result = [{ waterAmount: 0, electricAmount: 0, gasAmount: 0 }];
+        }
+        res.json(result[0]);
+    });
+});
+
+router.get('/weekEnergyUse', function(req, res) {
+
+    var startDate = moment().subtract(7, "days").format("YYYY-MM-DD");
+    var endDate = moment().subtract(0, "days").format("YYYY-MM-DD");
+
+    var sql = "SELECT productionDate, waterAmount, electricAmount, gasAmount FROM inventory " +
+        "WHERE batch = 0 AND productionDate BETWEEN ? AND ? ORDER BY productionDate";
+    var params = [ startDate, endDate ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw err;
+
+        res.json(result);
     });
 });
 

@@ -4,10 +4,12 @@ var dashboard = function() {
 	var electricCharge = 0.0, waterCharge = 0.0, gasCharge = 0.0, riceCharge = 0.0;
 	var electric = 0.0, water = 0.0, gas = 0.0, rice = 0.0;
 	var electricStart = -1, waterStart = -1, gasStart = -1;
-	var today, batch = -1;
+	var today, currentBatch = -1;
 	var todayDate;
 	var morningStart, morningEnd, noonStart, noonEnd;
-
+	var lastWeekWaterAmount, lastWeekElectricAmount, lastWeekGasAmount;
+	var lastWeekWaterChart, lastWeekElectricChart, lastWeekGasChart;
+	var colors = Highcharts.getOptions().colors;
 
 	var loadParameters = function() {
 		$.getJSON("/parameter/getValues", function(response) {
@@ -48,16 +50,16 @@ var dashboard = function() {
 
 	var loadPlanningDetails = function() {
 
-		if (batch == 1)
+		if (currentBatch == 1)
 			$('small#production-batch').text('上午');
-		else if (batch == 2)
+		else if (currentBatch == 2)
 			$('small#production-batch').text('下午');
 		else
 			$('small#production-batch').text('未生产');
 
-		$.getJSON("/planning/getCurrentDetails", { date: todayDate, batch: batch } ,function(response) {
+		$.getJSON("/planning/getCurrentDetails", { date: todayDate, batch: currentBatch } ,function(response) {
 			var total = 0;
-			
+
 			for (var i = 0; i < response.length; i = i + 2) {
 
 				var name1 =	$("<td/>").append(response[i].name);
@@ -143,31 +145,52 @@ var dashboard = function() {
 				$('div#today-electric').text(electric.toFixed(2));
 				$('div#today-gas').text(gas.toFixed(2));
 			}
+		});
 
-			/*$.getJSON("/dashboard/energy", function(response) {
-				$.each(response.data, function(i, item) {
-					var start = item.readData;
-					switch(item.type) {
-						case 1:
-							$('div#today-water').text(data.energy.water - start);
-							break;
-						case 2:
-							$('div#today-electric').text(data.energy.electric - start);
-							break;
-						case 3:
-							$('div#today-gas').text(data.energy.gas - start);
-							break;
-						case 4:
-							$('div#today-rice').text(data.energy.rice - start);
-							break;
-					}
-				});
-				
-			});*/
+		socket.on('water', function(data) {
+			socketMessge(''); 
+			
+			if (waterStart == -1)
+				errorMessge('未找到水起始读数');
+			else {
+				errorMessge('');
+				water = data.energy.water - waterStart;
+
+				$('div#today-water').text(water.toFixed(2));
+				setChartCurrentEnergy(lastWeekWaterChart, water);
+			}
+		});
+
+		socket.on('electric', function(data) {
+			socketMessge(''); 
+
+			if (electricStart == -1)
+				errorMessge('未找到电起始读数');
+			else {
+				errorMessge('');
+				electric = data.energy.electric - electricStart;
+
+				$('div#today-electric').text(electric.toFixed(2));
+				setChartCurrentEnergy(lastWeekElectricChart, electric);
+			}
+		});
+
+		socket.on('gas', function(data) {
+			socketMessge(''); 
+
+			if (gasStart == -1)
+				errorMessge('未找到气起始读数');
+			else {
+				errorMessge('');
+				gas = data.energy.gas - gasStart;
+
+				$('div#today-gas').text(gas.toFixed(2));
+				setChartCurrentEnergy(lastWeekGasChart, gas);
+			}
 		});
 
 		socket.on('rice', function(data) {
-			getRiceAmount(todayDate, batch);
+			getRiceAmount(todayDate, currentBatch);
 		});
 
 		socket.on('production', function(data) {
@@ -196,18 +219,32 @@ var dashboard = function() {
 			$('#current-time').html(now.format('YYYY年MM月DD日 HH:mm:ss'));
 
 			if (now.isAfter(morningStart) && now.isBefore(morningEnd))
-				batch = 1;
+				currentBatch = 1;
 			else if (now.isAfter(noonStart) && now.isBefore(noonEnd))
-				batch = 2;
+				currentBatch = 2;
 			else
-				batch = -1;
+				currentBatch = -1;
 
-			$('#debug-message').text(batch);
+			$('#debug-message').text(currentBatch);
 		},1000);
 
 	}
 
-	var handleWeekCompare = function(container, title) {
+	var setChartCurrentEnergy = function(chart, value) {
+		chart.series[0].data[0].update(value);		
+	}
+
+	var getLastWeekEnergy = function(callback) {
+		$.getJSON("/dashboard/lastWeekEnergy", { batch: currentBatch }, function(response) {
+			lastWeekWaterAmount = parseFloat(response.waterAmount);
+			lastWeekElectricAmount = parseFloat(response.electricAmount);
+			lastWeekGasAmount = parseFloat(response.gasAmount);
+
+			callback();
+		});
+	}
+
+	var initWeekCompare = function(container, title, lastValue, color) {
 		var option = {
 			chart: {
 				type: 'bar',
@@ -233,10 +270,11 @@ var dashboard = function() {
 			plotOptions: {
                 bar: {
                     dataLabels: {
-                        enabled: true
-                    }
-                },
-				enableMouseTracking: false
+                        enabled: true,
+						format: '{point.y:.2f}'
+                    },
+					enableMouseTracking: false
+                }
             },
 			credits: {
 				enabled: false
@@ -245,24 +283,35 @@ var dashboard = function() {
 				enabled: false
 			},
 			series: [{
-                name: '上周',
-                data: [107]
-			}, {
                 name: '本周',
-                data: [133]
-            }]
+                data: [0],
+				color: color
+            }, {
+                name: '上周',
+                data: [lastValue],
+				color: colors[1]
+			}]
 		};
-		
+
 		var chart = new Highcharts.Chart(option);
+		return chart
 	}
-	
-	var loadDashboardWeekCompare = function() {
-		handleWeekCompare('week-water', '用水');
-		handleWeekCompare('week-electric', '用电');
-		handleWeekCompare('week-gas', '用气');
+
+	var loadWeekCompare = function() {
+		getLastWeekEnergy(function() {
+			lastWeekWaterChart = initWeekCompare('week-water', '用水', lastWeekWaterAmount, colors[0]);
+			lastWeekElectricChart = initWeekCompare('week-electric', '用电', lastWeekElectricAmount, colors[2]);
+			lastWeekGasChart = initWeekCompare('week-gas', '用气', lastWeekGasAmount, colors[4]);
+		});
 	}
-	
-	var initColumn = function() {
+
+	var loadWeekEnergy = function() {
+		$.getJSON("/dashboard/weekEnergyUse", function(response) {
+			initWeekEnergyChart(response);
+		});
+	}
+
+	var initWeekEnergyChart = function(data) {
 		var option = {
 			chart: {
 				type: 'column',
@@ -272,9 +321,13 @@ var dashboard = function() {
 				text: null
 			},				
 			xAxis: {
-				categories: [],
+				categories: [],				
+				type: 'datetime',
+				//tickInterval: 24 * 3600 * 1000,
 				labels: {
-					enabled: false
+					formatter:function(){
+						return Highcharts.dateFormat('%d', this.value);
+					}
 				}
 			},
 			yAxis: {
@@ -289,7 +342,8 @@ var dashboard = function() {
 					borderWidth: 0,
 					dataLabels: {
 						enabled: true
-					}
+					},
+					enableMouseTracking: false
 				}
 			},
 			credits: {
@@ -300,25 +354,34 @@ var dashboard = function() {
 			},
 			series: [{
 				name: '水',
-				data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6],
+				data: [],
 				color: '#27a9e3'
 
 			}, {
 				name: '电',
-				data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0],
+				data: [],
 				color: '#28b779'
 
 			}, {
 				name: '气',
-				data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0],
+				data: [],
 				color: '#852b99'
 			}]
 		};
 		
+		$.each(data, function(i, item) {
+			var s = moment(item.productionDate);
+			var d = Date.UTC(s.year(), s.month(), s.date());
+				
+			option.xAxis.categories.push(d);
+			option.series[0].data.push(item.waterAmount);
+			option.series[1].data.push(item.electricAmount);
+			option.series[2].data.push(item.gasAmount);
+		});
 		var chart2 = new Highcharts.Chart(option);
 	}
 	
-	var loadDashboardHistoryCost = function() {
+	var loadHistoryCost = function() {
 		$.getJSON("/dashboard/lastCost", function(response) {
 
 			var option = {
@@ -356,7 +419,7 @@ var dashboard = function() {
 					align: 'left',
 					verticalAlign: 'top',
 					x: 50,
-					y: 20,
+					y: 10,
 					floating: true,
 					borderWidth: 1
 				},
@@ -383,8 +446,8 @@ var dashboard = function() {
 				var s = moment(item.productionDate);
 				var d = Date.UTC(s.year(), s.month(), s.date());
 
-				option.series[0].data.push([d, item.avgCost]);
-				option.series[1].data.push([d, item.sumCount]);
+				option.series[0].data.push([d, item.averageCost]);
+				option.series[1].data.push([d, item.totalCount]);
 			});
 			
 			var chart1 = new Highcharts.Chart(option);
@@ -393,7 +456,7 @@ var dashboard = function() {
 		
 	return {
 		init: function(b) {
-			batch = b;
+			currentBatch = b;
 			today = moment();
 			todayDate = today.format('YYYY-MM-DD');
 			
@@ -401,7 +464,7 @@ var dashboard = function() {
             loadPlanningDetails();
 			displayTime();
 			
-			loadStartEnergy(todayDate, batch);
+			loadStartEnergy(todayDate, currentBatch);
 			//getProduction('2014-10-09', 1);
 			//getRiceAmount('2014-10-09', 1);
 		},
@@ -409,11 +472,11 @@ var dashboard = function() {
 		initRealTime: function() {
 			handleRealTimeData();
 		},
-		
+
 		initChart: function() {
-			initColumn();
-			loadDashboardWeekCompare();
-			loadDashboardHistoryCost();
+			loadHistoryCost();
+			loadWeekCompare();
+			loadWeekEnergy();
 		}
 	}
 	

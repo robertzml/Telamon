@@ -52,6 +52,15 @@ router.post('/make_inventory', function(req, res) {
         });
     }
 
+    if (batch1 == 'checkBatch1' && batch2 == 'checkBatch2') {
+        var sql = "call make_inventory(?,?);";
+        var params = [ date, 0 ];
+
+        pool.query(sql, params, function(err, result) {
+            if (err) throw err;
+        });
+    }
+
     res.render('statistic/inventory', { title: '整理数据', message: '整理完成' })
 });
 
@@ -81,7 +90,7 @@ router.get('/costInventory', function(req, res) {
     var startDate = req.query.startDate;
     var endDate = req.query.endDate;
 
-    var sql = "SELECT * FROM inventory WHERE productionDate BETWEEN ? AND ? ORDER BY productionDate";
+    var sql = "SELECT * FROM inventory WHERE batch = 0 AND productionDate BETWEEN ? AND ? ORDER BY productionDate";
     var params = [ startDate, endDate ];
 
     pool.query(sql, params, function(err, result) {
