@@ -131,7 +131,7 @@ router.get('/lastWeekEnergy', function(req, res) {
 router.get('/weekEnergyUse', function(req, res) {
 
     var startDate = moment().subtract(7, "days").format("YYYY-MM-DD");
-    var endDate = moment().subtract(0, "days").format("YYYY-MM-DD");
+    var endDate = moment().subtract(1, "days").format("YYYY-MM-DD");
 
     var sql = "SELECT productionDate, waterAmount, electricAmount, gasAmount FROM inventory " +
         "WHERE batch = 0 AND productionDate BETWEEN ? AND ? ORDER BY productionDate";
@@ -140,6 +140,9 @@ router.get('/weekEnergyUse', function(req, res) {
     pool.query(sql, params, function(err, result) {
         if (err) throw err;
 
+        for(var i = 0; i < result.length; i++) {
+            result[i].productionDate = moment(result[i].productionDate).format('YYYY-MM-DD');
+        }
         res.json(result);
     });
 });

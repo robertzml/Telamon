@@ -212,7 +212,7 @@ var dashboard = function() {
 		});
 	}
 
-	var displayTime = function($dom) {
+	var displayTime = function() {
 
 		setInterval(function(){
 			var now = moment();
@@ -225,7 +225,6 @@ var dashboard = function() {
 			else
 				currentBatch = -1;
 
-			$('#debug-message').text(currentBatch);
 		},1000);
 
 	}
@@ -251,7 +250,11 @@ var dashboard = function() {
 				renderTo: container
 			},
 			title: {
-				text: title
+				text: title,
+                margin: 8,
+                style: {
+                    'fontSize': '14px'
+                }
 			},
 			xAxis: {
 				title: {
@@ -271,9 +274,12 @@ var dashboard = function() {
                 bar: {
                     dataLabels: {
                         enabled: true,
+                        color: '#FFFFFF',
+                        align: 'right',
 						format: '{point.y:.2f}'
                     },
-					enableMouseTracking: false
+					enableMouseTracking: false,
+                    pointWidth: 12
                 }
             },
 			credits: {
@@ -289,7 +295,7 @@ var dashboard = function() {
             }, {
                 name: '上周',
                 data: [lastValue],
-				color: colors[1]
+				color: colors[8]
 			}]
 		};
 
