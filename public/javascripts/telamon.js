@@ -1,6 +1,8 @@
 
 var telamon = function () { 
 	
+	var startDate, endDate;
+	
 	var handleDiningValidate = function() {
 		var form1 = $('#form_dining');
 		var error1 = $('.alert-danger', form1);
@@ -146,52 +148,61 @@ var telamon = function () {
             return;
         }
 
+		startDate = moment().subtract('days', 29);
+		endDate = moment();
+		$('input#startDate').val(startDate.format('YYYY-MM-DD'));
+		$('input#endDate').val(endDate.format('YYYY-MM-DD'));
+		//console.log(startDate.format('YYYY-MM-DD'));
+		//console.log(endDate.format('YYYY-MM-DD'));
+			
         $dom.daterangepicker({
-                opens: 'left',
-                startDate: moment().subtract('days', 29),
-                endDate: moment(),
-                minDate: '2014-01-01',
-                maxDate: '2020-12-31',
-                dateLimit: {
-                    days: 90
-                },
-                showDropdowns: true,
-                showWeekNumbers: true,
-                timePicker: false,
-                timePickerIncrement: 1,
-                timePicker12Hour: true,
-                ranges: {
-                    '今天': [moment(), moment()],
-                    '昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
-                    '最近7天': [moment().subtract('days', 6), moment()],
-                    '最近30天': [moment().subtract('days', 29), moment()],
-					'上周': [moment().day(-6), moment().day(0)],
-					'本周': [moment().day(1), moment().day(7)],
-                    '本月': [moment().startOf('month'), moment().endOf('month')],
-                    '上月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
-                },
-                buttonClasses: ['btn'],
-                applyClass: 'green',
-                cancelClass: 'default',
-                format: 'YYYY-MM-DD',
-                separator: ' 至 ',
-                locale: {
-                    applyLabel: '查询',
-					cancelLabel: '取消',
-                    fromLabel: '开始',
-                    toLabel: '结束',
-                    customRangeLabel: '自定义',
-                    daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
-                    monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
-                    firstDay: 1
-                }
-            },
-            function (start, end) {
-                $dom.find('span').html(start.format('YYYY-MM-DD') + ' 至 ' + end.format('YYYY-MM-DD'));
-            }
-        ).on('apply.daterangepicker', function(ev, picker) {
+			opens: 'left',
+			startDate: moment().subtract('days', 29),
+			endDate: moment(),
+			minDate: '2014-01-01',
+			maxDate: '2020-12-31',
+			dateLimit: {
+				days: 90
+			},
+			showDropdowns: true,
+			showWeekNumbers: true,
+			timePicker: false,
+			timePickerIncrement: 1,
+			timePicker12Hour: true,
+			ranges: {
+				'今天': [moment(), moment()],
+				'昨天': [moment().subtract('days', 1), moment().subtract('days', 1)],
+				'最近7天': [moment().subtract('days', 6), moment()],
+				'最近30天': [moment().subtract('days', 29), moment()],
+				'上周': [moment().day(-6), moment().day(0)],
+				'本周': [moment().day(1), moment().day(7)],
+				'本月': [moment().startOf('month'), moment().endOf('month')],
+				'上月': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+			},
+			buttonClasses: ['btn'],
+			applyClass: 'green',
+			cancelClass: 'default',
+			format: 'YYYY-MM-DD',
+			separator: ' 至 ',
+			locale: {
+				applyLabel: '查询',
+				cancelLabel: '取消',
+				fromLabel: '开始',
+				toLabel: '结束',
+				customRangeLabel: '自定义',
+				daysOfWeek: ['日', '一', '二', '三', '四', '五', '六'],
+				monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+				firstDay: 1
+			}
+		}, function (start, end) {
+			$dom.find('span').html(start.format('YYYY-MM-DD') + ' 至 ' + end.format('YYYY-MM-DD'));
+		}).on('apply.daterangepicker', function(ev, picker) {
 			console.log(picker.startDate.format('YYYY-MM-DD'));
 			console.log(picker.endDate.format('YYYY-MM-DD'));
+			startDate = picker.startDate;
+			endDate = picker.endDate;
+			$('input#startDate').val(startDate.format('YYYY-MM-DD'));
+			$('input#endDate').val(endDate.format('YYYY-MM-DD'));
 			callback(picker.startDate.format('YYYY-MM-DD'), picker.endDate.format('YYYY-MM-DD'));
 		});
 		
@@ -400,7 +411,18 @@ var telamon = function () {
 					$dom.append(row);
 				});
 			});
-		}		
+		},
+
+		exportPlanning: function($dom) {
+			$dom.click(function(e) {
+				e.preventDefault();
+				
+				
+				$.get('/statistic/exportPlanning', { startDate: startDate.format("YYYY-MM-DD"), endDate: endDate.format("YYYY-MM-DD") }, function(response) {
+				
+				});
+			});
+		}
 
 	}
 

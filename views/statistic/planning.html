@@ -46,9 +46,16 @@
                     <div class="portlet-body">
                         <div class="row">
                             <div class="col-md-12">
-                                <form action="#" class="form-horizontal form-bordered">
+                                <form action="/statistic/exportPlanning" class="form-horizontal form-bordered">
                                     <div class="form-group ">
                                         <div class="col-md-offset-8 col-md-4">
+                                            <input type="hidden" name="startDate" id="startDate" />
+                                            <input type="hidden" name="endDate" id="endDate" />
+
+                                            <div class="pull-right">
+                                                <button class="btn btn-primary" type="submit">导出Excel</button>
+                                            </div>
+
                                             <div id="statistic-range" class="btn default pull-right">
                                                 <i class="fa fa-calendar"></i>
                                                 &nbsp; <span>
@@ -85,6 +92,8 @@
                 telamon.loadPlanningStatistic(response);
             });
         });
+
+        //telamon.exportPlanning($('a#export'));
     });
 </script>
 {% endblock %}

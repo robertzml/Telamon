@@ -43,7 +43,7 @@ router.get('/', function(req, res) {
 });
 
 
-
+// get today start energy
 router.get('/getStartEnergy', function(req, res) {
     var date = req.query.date;
     var batch = req.query.batch;

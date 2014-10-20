@@ -144,6 +144,9 @@ var dashboard = function() {
 				$('div#today-water').text(water.toFixed(2));
 				$('div#today-electric').text(electric.toFixed(2));
 				$('div#today-gas').text(gas.toFixed(2));
+				setChartCurrentEnergy(lastWeekWaterChart, water);
+				setChartCurrentEnergy(lastWeekElectricChart, electric);
+				setChartCurrentEnergy(lastWeekGasChart, gas);
 			}
 		});
 

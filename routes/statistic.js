@@ -26,7 +26,6 @@ router.get('/cost', function(req, res) {
 
 
 
-
 // make one batch inventory
 router.post('/make_inventory', function(req, res) {
     var date = req.body.inventory_date;
@@ -103,5 +102,29 @@ router.get('/costInventory', function(req, res) {
 });
 
 
+router.get('/exportPlanning', function(req, res) {
+
+    var startDate = req.query.startDate;
+    var endDate = req.query.endDate;
+
+    var sql = "SELECT * FROM planning WHERE productionDate BETWEEN ? and ?";
+    var params = [ startDate, endDate ];
+
+    pool.query(sql, params, function(err, result) {
+
+        var txt = '';
+        txt += "编号,生产日期,生产批次,备注,总数\n";
+
+        for (var i = 0; i < result.length; i++) {
+            txt += result[i].id + "," +  moment(result[i].productionDate).format('YYYY-MM-DD') + "," +
+                result[i].productionBatch + "," + result[i].remark + "," + result[i].quantity + "\n";
+        }
+
+        res.set('Content-Type', 'text/plain; charset=UTF-8');
+        res.attachment('生产计划.csv');
+        res.send(txt);
+    });
+
+});
 
 module.exports = router;
