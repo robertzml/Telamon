@@ -5,6 +5,7 @@ var dashboard = function() {
 	var electric = 0.0, water = 0.0, gas = 0.0, rice = 0.0;
 	var electricStart = -1, waterStart = -1, gasStart = -1;
 	var today, currentBatch = -1;
+	var productionCount = 0;
 	var todayDate;
 	var morningStart, morningEnd, noonStart, noonEnd;
 	var lastWeekWaterAmount, lastWeekElectricAmount, lastWeekGasAmount;
@@ -98,16 +99,17 @@ var dashboard = function() {
 		});
 	}
 
-	var getProduction = function(date, batch) {
-		$.getJSON("/dashboard/getProduction", { date: date, batch: batch }, function(response) {
-			//console.log(response);
-		});
-	}
-
 	var getRiceAmount = function(date, batch) {
 		$.getJSON("/dashboard/getRiceAmount", { date: date, batch: batch }, function(response) {
 			rice = parseFloat(response);
 			$('div#today-rice').text(rice);
+		});
+	}
+
+	var getRiceCount = function(date, batch) {
+		$.getJSON("/dashboard/getRiceCount", { date: date, batch: batch }, function(response) {
+			productionCount = parseInt(response);
+			$('b#current-production').text(productionCount);
 		});
 	}
 
@@ -121,8 +123,8 @@ var dashboard = function() {
 
 	//calculate the cost by page display value
 	var calculateCost = function() {
-		var count = parseInt($('b#current-production').text());
-		var price = (water * waterCharge + electric * electricCharge + gas * gasCharge + rice * riceCharge) / count;
+		//var count = parseInt($('b#current-production').text());
+		var price = (water * waterCharge + electric * electricCharge + gas * gasCharge + rice * riceCharge) / productionCount;
 
 		$('b#current-cost').text(price.toFixed(2));
 	}
@@ -197,8 +199,9 @@ var dashboard = function() {
 		});
 
 		socket.on('production', function(data) {
-			$('b#current-production').text(data.production.count);
+			//$('b#current-production').text(data.production.count);
 			$('b#current-weight').text(data.production.weight);
+			getRiceCount();
 			calculateCost();
 		});
 

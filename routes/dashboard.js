@@ -59,21 +59,8 @@ router.get('/getStartEnergy', function(req, res) {
     });
 });
 
-// not called
-router.get('/getProduction', function(req, res) {
-    var date = req.query.date;
-    var batch = req.query.batch;
 
-    var sql = "SELECT COUNT(*) as count, SUM(weight) as weight FROM realWeight WHERE productionDate = ? AND batch = ?";
-    var params = [ date, batch ];
-
-    pool.query(sql, params, function(err, result) {
-        if (err) throw err;
-
-        res.json(result[0]);
-    });
-});
-
+// get the input rice weight amount
 router.get('/getRiceAmount', function(req, res) {
     var date = req.query.date;
     var batch = req.query.batch;
@@ -85,6 +72,22 @@ router.get('/getRiceAmount', function(req, res) {
         if (err) throw  err;
 
         res.json(result[0][0].p_weight);
+    });
+});
+
+
+// get the output rice count
+router.get('/getRiceCount', function(req, res) {
+    var date = req.query.date;
+    var batch = req.query.batch;
+
+    var sql = "call get_rice_count(?, ?, @a)";
+    var params = [ date, batch ];
+
+    pool.query(sql, params, function(err, result) {
+        if (err) throw  err;
+
+        res.json(result[0][0].p_count);
     });
 });
 
