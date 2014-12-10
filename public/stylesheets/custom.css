@@ -153,3 +153,11 @@ table.pricing-content {
   color: #36d7ac;
 }
 
+#planning-details {
+  font-size: 18px;
+}
+
+.page-footer-message {
+  float:left;
+  margin-left:100px;
+}
