@@ -344,6 +344,7 @@ var dashboard = function() {
 			},
 			yAxis: {
 				min: 0,
+				max: 300,
 				title: {
 					text: null
 				}
@@ -352,6 +353,7 @@ var dashboard = function() {
 				column: {
 					pointPadding: 0.3,
 					borderWidth: 0,
+					groupPadding: 0.1,
 					dataLabels: {
 						enabled: true
 					},
@@ -398,8 +400,7 @@ var dashboard = function() {
 
 			var option = {
 				chart: {
-					renderTo: 'history_cost',
-					type: 'line'
+					renderTo: 'history_cost'
 				},
 				title: {
 					text: null
@@ -416,12 +417,14 @@ var dashboard = function() {
 				yAxis: [{
 					title: {
 						text: '成本(元/箱)'
-					}
+					},
+					min: 0
 				}, {
 					title: {
 						text: '出饭量(箱)'
 					},
-					opposite: true
+					opposite: true,
+					max: 800
 				}],
 				credits: {
 					enabled: false
@@ -438,17 +441,27 @@ var dashboard = function() {
 				plotOptions: {
 					line: {
 						dataLabels: {
+							enabled: true,
+							color: 'red'
+						},
+						enableMouseTracking: false
+					},
+					column: {
+						dataLabels: {
 							enabled: true
 						},
+						pointWidth: 10,
 						enableMouseTracking: false
 					}
 				},
 				series: [{
 					name: '成本',
+					type: 'line',
 					yAxis: 0,
 					data: []
 				}, {
 					name: '出饭量',
+					type: 'column',
 					yAxis: 1,
 					data: []
 				}]
