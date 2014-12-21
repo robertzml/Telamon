@@ -58,6 +58,8 @@ var dashboard = function() {
 		else
 			$('small#production-batch').text('未生产');
 
+		$('#planning-details').empty();
+
 		$.getJSON("/planning/getCurrentDetails", { date: todayDate, batch: currentBatch } ,function(response) {
 			var total = 0;
 
@@ -218,8 +220,9 @@ var dashboard = function() {
 		});
 	}
 
-	var displayTime = function() {
+	var setTimer = function() {
 
+		// display time
 		setInterval(function(){
 			var now = moment();
 			$('#current-time').html(now.format('YYYY年MM月DD日 HH:mm:ss'));
@@ -232,6 +235,11 @@ var dashboard = function() {
 				currentBatch = -1;
 
 		},1000);
+
+		// load planning details
+		setInterval(function(){
+			loadPlanningDetails();
+		}, 30000);
 
 	}
 
@@ -487,7 +495,8 @@ var dashboard = function() {
 			
 			loadParameters();
             loadPlanningDetails();
-			displayTime();
+
+			setTimer();
 			
 			loadStartEnergy(todayDate, currentBatch);
 			//getProduction('2014-10-09', 1);
