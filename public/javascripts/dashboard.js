@@ -12,6 +12,12 @@ var dashboard = function() {
 	var lastWeekWaterChart, lastWeekElectricChart, lastWeekGasChart;
 	var colors = Highcharts.getOptions().colors;
 
+	var loadBatch = function() {
+		$.getJSON("/dashboard/getBatch", function(response) {
+			currentBatch = response;
+		});
+	}
+
 	var loadParameters = function() {
 		$.getJSON("/parameter/getValues", function(response) {
 			$.each(response, function(i, item) {
@@ -55,8 +61,12 @@ var dashboard = function() {
 			$('small#production-batch').text('上午');
 		else if (currentBatch == 2)
 			$('small#production-batch').text('下午');
-		else
+		else {
 			$('small#production-batch').text('未生产');
+			$('#planning-details').empty();
+			return;
+		}
+
 
 		$('#planning-details').empty();
 
@@ -85,19 +95,28 @@ var dashboard = function() {
 
 			$('#total-planning').text(total);
 		});
-	}	
+	}
 
 	var loadStartEnergy = function(date, batch) {
+		if (currentBatch == -1)
+			return;
+
 		$.getJSON("/dashboard/getStartEnergy", { date: date, batch: batch, type: 1 }, function(response) {
-			waterStart = parseFloat(response);
+			var w = parseFloat(response);
+			if (waterStart != w)
+				waterStart = w;
 		});
 
 		$.getJSON("/dashboard/getStartEnergy", { date: date, batch: batch, type: 2 }, function(response) {
-			electricStart = parseFloat(response);
+			var e = parseFloat(response);
+			if (electricStart != e)
+				electricStart = e;
 		});
 
 		$.getJSON("/dashboard/getStartEnergy", { date: date, batch: batch, type: 3 }, function(response) {
-			gasStart = parseFloat(response);
+			var g = parseFloat(response);
+			if (gasStart != g)
+				gasStart = g;
 		});
 	}
 
@@ -236,11 +255,20 @@ var dashboard = function() {
 
 		},1000);
 
+		// load batch
+		setInterval(function() {
+			loadBatch();
+		}, 600000);
+
 		// load planning details
 		setInterval(function(){
 			loadPlanningDetails();
 		}, 30000);
 
+		// load start energy
+		setInterval(function() {
+			loadStartEnergy(todayDate, currentBatch);
+		}, 600000);
 	}
 
 	var setChartCurrentEnergy = function(chart, value) {
@@ -488,17 +516,19 @@ var dashboard = function() {
 	}
 		
 	return {
-		init: function(b) {
-			currentBatch = b;
+		init: function() {
+			//currentBatch = b;
 			today = moment();
 			todayDate = today.format('YYYY-MM-DD');
-			
+
+			loadBatch();
 			loadParameters();
             loadPlanningDetails();
+			loadStartEnergy(todayDate, currentBatch);
 
 			setTimer();
 			
-			loadStartEnergy(todayDate, currentBatch);
+
 			//getProduction('2014-10-09', 1);
 			//getRiceAmount('2014-10-09', 1);
 		},
