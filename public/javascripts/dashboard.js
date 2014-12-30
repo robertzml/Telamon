@@ -12,9 +12,11 @@ var dashboard = function() {
 	var lastWeekWaterChart, lastWeekElectricChart, lastWeekGasChart;
 	var colors = Highcharts.getOptions().colors;
 
-	var loadBatch = function() {
+	var loadBatch = function(callback) {
 		$.getJSON("/dashboard/getBatch", function(response) {
 			currentBatch = response;
+
+			callback();
 		});
 	}
 
@@ -151,7 +153,7 @@ var dashboard = function() {
 	}
 
 	var handleRealTimeData = function() {
-		var socket = io('http://localhost:4002');
+		var socket = io('http://172.18.5.5:4002');
 
 		socket.on('energy', function(data) {
 			socketMessge(''); 
@@ -222,7 +224,7 @@ var dashboard = function() {
 		socket.on('production', function(data) {
 			//$('b#current-production').text(data.production.count);
 			$('b#current-weight').text(data.production.weight);
-			getRiceCount();
+			getRiceCount(todayDate, currentBatch);
 			calculateCost();
 		});
 
@@ -255,17 +257,17 @@ var dashboard = function() {
 
 		},1000);
 
-		// load batch
+		// load batch, 10 mins
 		setInterval(function() {
 			loadBatch();
 		}, 600000);
 
-		// load planning details
+		// load planning details, 5 mins
 		setInterval(function(){
 			loadPlanningDetails();
 		}, 30000);
 
-		// load start energy
+		// load start energy, 10 mins
 		setInterval(function() {
 			loadStartEnergy(todayDate, currentBatch);
 		}, 600000);
@@ -347,9 +349,9 @@ var dashboard = function() {
 
 	var loadWeekCompare = function() {
 		getLastWeekEnergy(function() {
-			lastWeekWaterChart = initWeekCompare('week-water', '用水', lastWeekWaterAmount, colors[0]);
-			lastWeekElectricChart = initWeekCompare('week-electric', '用电', lastWeekElectricAmount, colors[2]);
-			lastWeekGasChart = initWeekCompare('week-gas', '用气', lastWeekGasAmount, colors[4]);
+			lastWeekWaterChart = initWeekCompare('compare-water', '用水', lastWeekWaterAmount, colors[0]);
+			lastWeekElectricChart = initWeekCompare('compare-electric', '用电', lastWeekElectricAmount, colors[2]);
+			lastWeekGasChart = initWeekCompare('compare-gas', '用气', lastWeekGasAmount, colors[4]);
 		});
 	}
 
@@ -517,20 +519,19 @@ var dashboard = function() {
 		
 	return {
 		init: function() {
-			//currentBatch = b;
+
 			today = moment();
 			todayDate = today.format('YYYY-MM-DD');
 
-			loadBatch();
+			loadBatch(function() {
+				loadPlanningDetails();
+				loadStartEnergy(todayDate, currentBatch);
+				loadWeekCompare();
+			});
+
 			loadParameters();
-            loadPlanningDetails();
-			loadStartEnergy(todayDate, currentBatch);
 
 			setTimer();
-			
-
-			//getProduction('2014-10-09', 1);
-			//getRiceAmount('2014-10-09', 1);
 		},
 		
 		initRealTime: function() {
@@ -539,7 +540,7 @@ var dashboard = function() {
 
 		initChart: function() {
 			loadHistoryCost();
-			loadWeekCompare();
+			//loadWeekCompare();
 			loadWeekEnergy();
 		}
 	}

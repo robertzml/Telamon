@@ -10,6 +10,14 @@ var pool  = mysql.createPool({
     multipleStatements: true
 });
 
+/*var pool  = mysql.createPool({
+    host     : '172.18.5.5', //'202.195.145.229',
+    user     : 'root', //'utelamon',
+    password : 'py1205', //'123123',
+    database :'telamon',
+    multipleStatements: true
+}); */
+
 exports.query = function(sql, callback) {
     pool.query(sql, callback);
 };

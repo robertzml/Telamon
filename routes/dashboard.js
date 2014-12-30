@@ -4,7 +4,7 @@ var moment = require('moment');
 var pool = require('../models/pool');
 
 router.get('/', function(req, res) {
-    var sql = "SELECT * FROM parameter";
+    /*var sql = "SELECT * FROM parameter";
 
     pool.query(sql, function(err, result) {
         if (err) throw err;
@@ -38,8 +38,8 @@ router.get('/', function(req, res) {
             batch = -1;
 
         res.render('dashboard', { title: '实时界面', batch: batch });
-    });
-
+    });*/
+    res.render('dashboard', { title: '实时界面' });
 });
 
 
