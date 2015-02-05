@@ -7,6 +7,19 @@ var moment = require('moment');
 var pool = require('../models/pool');
 
 
+router.use(function (req, res, next) {
+
+    if(req.session.username) {
+        next();
+    } else {
+        if (req.originalUrl == '/users/login')
+            next();
+        else
+            res.redirect('/users/login');
+    }
+
+});
+
 router.get('/', function(req, res) {
 
     var sql = "SELECT * FROM parameter";

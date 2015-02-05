@@ -9,6 +9,19 @@ var moment = require('moment');
 var pool = require('../models/pool');
 
 
+router.use(function (req, res, next) {
+
+    if(req.session.username) {
+        next();
+    } else {
+        if (req.originalUrl == '/users/login')
+            next();
+        else
+            res.redirect('/users/login');
+    }
+
+});
+
 router.get('/inventory', function(req, res) {
 
     res.render('statistic/inventory', { title: '整理数据', message: '' })

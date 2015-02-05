@@ -3,8 +3,11 @@ var router = express.Router();
 var moment = require('moment');
 var pool = require('../models/pool');
 
+
+
 /* GET home page. */
 router.get('/', function(req, res) {
+
     res.render('index', { title: '主页' });
 });
 

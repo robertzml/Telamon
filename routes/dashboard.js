@@ -4,41 +4,7 @@ var moment = require('moment');
 var pool = require('../models/pool');
 
 router.get('/', function(req, res) {
-    /*var sql = "SELECT * FROM parameter";
 
-    pool.query(sql, function(err, result) {
-        if (err) throw err;
-
-        var morningStart, morningEnd, noonStart, noonEnd;
-        var batch;
-        var now = moment();
-
-        for (var i = 0; i < result.length; i++ ) {
-            switch(result[i].name) {
-                case 'morning-start':
-                    morningStart = moment(result[i].value, 'HH:mm:ss');
-                    break;
-                case 'morning-end':
-                    morningEnd = moment(result[i].value, 'HH:mm:ss');
-                    break;
-                case 'noon-start':
-                    noonStart = moment(result[i].value, 'HH:mm:ss');
-                    break;
-                case 'noon-end':
-                    noonEnd = moment(result[i].value, 'HH:mm:ss');
-                    break;
-            }
-        }
-
-        if (now.isAfter(morningStart) && now.isBefore(morningEnd))
-            batch = 1;
-        else if (now.isAfter(noonStart) && now.isBefore(noonEnd))
-            batch = 2;
-        else
-            batch = -1;
-
-        res.render('dashboard', { title: '实时界面', batch: batch });
-    });*/
     res.render('dashboard', { title: '实时界面' });
 });
 
