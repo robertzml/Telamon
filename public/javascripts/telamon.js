@@ -324,8 +324,7 @@ var telamon = function () {
 			var colors = Highcharts.getOptions().colors;
 			var option = {
 				chart: {
-					renderTo: 'container1',
-					type: 'line'
+					renderTo: 'container1'
 				},
 				title: {
 					text: '米饭生产成本曲线'
@@ -343,6 +342,7 @@ var telamon = function () {
 					title: {
 						text: '成本(元/箱)'
 					},
+                    min: 0,
 					stackLabels: {
 						enabled: true,
 						style: {
@@ -355,6 +355,7 @@ var telamon = function () {
 						text: '总箱数'
 					},
 					opposite: true,
+                    max: 500,
 					stackLabels: {
 						enabled: true,
 						style: {
@@ -379,10 +380,12 @@ var telamon = function () {
 				series: [{
 					yAxis: 0,
 					name: '成本',
+                    type: 'line',
 					data: []
 				},{
 					yAxis: 1,
 					name: '产量',
+                    type: 'column',
 					data: []
 				}]
 			};

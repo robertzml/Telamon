@@ -8,7 +8,6 @@ var router = express.Router();
 var moment = require('moment');
 var pool = require('../models/pool');
 
-
 router.use(function (req, res, next) {
 
     if(req.session.username) {
@@ -133,7 +132,7 @@ router.get('/exportPlanning', function(req, res) {
                 result[i].productionBatch + "," + result[i].remark + "," + result[i].quantity + "\n";
         }
 
-        res.set('Content-Type', 'text/plain; charset=UTF-8');
+        res.set('Content-Type', 'text/plain; charset=gbk');
         res.attachment('生产计划.csv');
         res.send(txt);
     });
